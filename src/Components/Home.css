@@ -34,7 +34,8 @@
   padding: 40px;
 }
 
-.images-flex, .discrpition-wrapper {
+.images-flex,
+.discrpition-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,20 +79,15 @@
   transition: all 0.3s ease-in-out;
 }
 .discrpition {
-  /* z-index:99;  */
-  left: 0px;
-
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(26, 24, 24, 0.5);
   background: white;
   color: #0d0d0c;
-  
+  padding: 1rem;
   justify-content: space-around;
   flex-direction: column;
 }
 .discrpition h1 {
-  margin-top: 20;
-  font-weight: normal;
   font-size: 20px;
   text-align: center;
   align-items: flex-start;
@@ -105,9 +101,9 @@
 .discrpition p {
   margin: 0;
   line-height: 18px;
-  /* font-style: ; */
-  padding: 5px;
+  padding: 5px 2rem;
   color: black;
+  font-size: 14px;
 }
 h4 {
   /*text-decoration: underline;*/
@@ -134,34 +130,86 @@ h4 {
   margin-bottom: 40px;
 }
 
+.sec {
+  padding: 3rem 0;
+}
+.sec-heading {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.sec-heading a {
+  margin-left: 1rem;
+}
+.image-flex-wrapper,
+.discrpition {
+  width: 29%;
+  height: 300px;
+  margin: 2%;
+  text-align: center;
+}
+.discrpition .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #2ecc71, #3498db);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.discrpition svg {
+  font-size: 4.5rem;
+  color: #fff;
+}
 
-.sec{
-    padding: 3rem 0;
+@media all and (max-width: 1200px) {
+  .images-flex,
+  .discrpition-wrapper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
-.sec-heading{
-    text-align: center;
-    padding-bottom: 3rem;
+
+@media all and (max-width: 1050px) {
+  .images-flex,
+  .discrpition-wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .image-flex-wrapper,
+  .discrpition {
+    width: 46%;
+  }
 }
-.sec-heading a{
-    margin-left: 1rem;
+
+@media all and (max-width: 768px){
+    .Header ul{
+        display: none;
+    }
+    .footer ul li{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .footer ul li a{
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 15px;
+    }
 }
-.image-flex-wrapper, .discrpition{
-    width: 29%;
-    height: 300px;
-    margin: 2%;
-    text-align: center;
-}
-.discrpition .icon{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(to right, #2ecc71, #3498db);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-.discrpition svg{
-    font-size: 4.5rem;
-    color: #fff;
+
+@media all and (max-width: 576px) {
+  .images-flex,
+  .discrpition-wrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .image-flex-wrapper,
+  .discrpition {
+    width: 100%;
+  }
+  .footer{
+    display: none;
+  }
 }

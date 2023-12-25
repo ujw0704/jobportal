@@ -150,7 +150,7 @@ function Home() {
             <div className="icon">
               <PlaceIcon />
             </div>
-            <h1>matches the job description and location to the keywords.</h1>
+            <h1>Matches the job description and location to the keywords.</h1>
             <p>
               Sponsored Jobs appear higher in search results while free listings
               lose visibility
