@@ -114,9 +114,9 @@ function Home() {
             <h1>
              Find jobs
             
-              {/* <p>
+               <p>
 
-              </p> */}
+              </p> 
               <Link to="/apply/" className="btn btn-primary py-3 px-5">Apply Now</Link>
 
               
@@ -137,8 +137,8 @@ function Home() {
       <div className='jobs'>
 
     <div className='discrpition' >
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-            <ScreenSearchDesktopIcon style={{ color: '#333', fontSize: 200, marginLeft: '30px' }} />
+    <div  className ="icons">
+            <ScreenSearchDesktopIcon  />
           </div>
       <h1>People Search For Jobs on Nippon Career</h1>
         
@@ -149,15 +149,15 @@ function Home() {
       </p>
     </div>
     <div className='discrpition'>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-    <ContentPasteSearchIcon style={{ color: '#333', fontSize: 150, marginLeft: '45px' }} />;
+    <div  className ="icons">
+    <ContentPasteSearchIcon  />;
     </div>
       <h1>Jobs appear in search results</h1>
       <p> Nippon carrier matches the job description and location to the keywords.</p>
     </div>
     <div className='discrpition'>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-    <PlaceIcon style={{ color: '#333', fontSize: 150, marginLeft: '55px' }} />
+    <div className='icons' >
+    <PlaceIcon  />
     </div>
       <h1>matches the job description and location to the keywords.</h1>
       

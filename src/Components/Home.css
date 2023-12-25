@@ -30,9 +30,9 @@
     line-height: 60px;
     font-size: 25px;
     /* font-style: normal; */
-    filter: drop-shadow(-3px -3px rgba(225,225,225,0,3)),
+    /* filter: drop-shadow(-3px -3px rgba(225,225,225,0,3)),
                       5px 5px 5px rgba(0,0,0, 0,2),
-                      15px 15px rgba(0,0, 0,0,2);
+                      15px 15px rgba(0,0, 0,0,2); */
    
     padding:40px;
 
@@ -132,9 +132,27 @@
         color: black;
 
        
-        
-
     }
+    .discrpition .icons{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #2ecc71, #3498db);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-left: 70px;
+        margin-top: 10px;
+        /* text-align: center; */
+    }
+
+    .discrpition svg {
+        font-size: 4.5rem;
+        color: #fff;
+      }
+      
+
 h4{
     /*text-decoration: underline;*/
     font-family:'Roboto', sans-serif;
