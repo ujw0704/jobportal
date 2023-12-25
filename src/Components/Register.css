@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    
+    /* width: 100%; */
+    /* background-color: #283fbd; */
+   
+    color: #242328;
+   
+ 
+ 
+    
+}
+.register{
+    top: 30px;
+}
+
+h2{
+   
+ 
+     font-family: "italic";
+     color:#31846f;
+    
+    
+    
+}
+.register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 33px; 
+  flex-wrap: wrap;
+  
+}
+.register input{
+      
+    color: #2e2929;
+    background-color: none;
+    padding: 0.625rem;
+   border: 1x solid #976aac;
+    transition: border-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    width: 500px;
+    height: 30px;
+    
+   
+}
+
+.register label{
+    position: absolute;
+    bottom:95%; 
+  left: 0;
+  transform: translateY(-50%) translateX(0.625rem);
+  color: #efefef;
+  padding-inline: 0.25rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+  z-index: 999;
+  border-radius: 3px;
+  /* padding: 3px; */
+ 
+ 
+  transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+  
+}
+
+.register:hover input{
+    border-color: #216fa4; 
+    color: #0a0a0a; 
+}
+.register input:focus {
+    outline: none;
+    border-color: #526a82; 
+}
+
+.register:focus-within label,
+.register:not(:has(:placeholder-shown)) label {
+   
+    transform: 0.625rem -1rem;
+     background-color: #1abc8b;  
+    border-color: transparent;
+}
+
+.register::placeholder{
+    color: transparent;
+    cursor: alias;
+}
+
+.register:hover label {
+   /* color: rgb(205, 224, 218);  */
+    background-color: #1e1f1f;
+}
+form {
+    width: 320px; 
+     margin: 20px auto;
+     text-align: center;
+     /* border: 1px solid rgb(196, 114, 114); */
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction:column;
+     gap: 10px;
+     padding: 20px;
+     /* box-shadow: inset 0 5px 30px rgba(151, 84, 84, 0.5), 0
+     0 10px rgba(17, 16, 16, 0.1); */
+     backdrop-filter: blur(30px) saturate(50%);
+     border-radius: 30px; 
+     z-index: 998;
+     height: 350px;
+} 
+.btn{
+
+    padding: 0.625rem 1rem;
+    background-color: #1a27bc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+     border-radius: 5px; 
+    margin-bottom: 65px;
+    width: 500px;
+        margin-top:10px 
+    
+}
+button:hover{
+    background-color: #282929; 
+}
