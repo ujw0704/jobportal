@@ -159,6 +159,7 @@ h4 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .discrpition svg{
     font-size: 4.5rem;
