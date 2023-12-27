@@ -14,9 +14,10 @@
     background-attachment: fixed;
     box-shadow: 10px 10px 10px rgba(26, 24, 24, 0.5);
    
+   
 }
 .typewriter{
-    font-family:'Courier New', Courier, monospace;
+    font-family:roman;
     white-space: pre;
     animation: typing 3s steps(4) infinite;
     text-align:center;
@@ -38,14 +39,16 @@
 
 
  }
-
+ 
  .images-flex{
-    display: flex;
+     display: flex;
+      opacity: 3;
     justify-content: center;
     align-items: center;
     height:300px;
     width:300px;
     margin-left: 450px;
+
     
     
 }
@@ -63,7 +66,7 @@
 
  }
 .swiper_container{
-    width:100%;
+    width:60%;
     height:360px;
     overflow: hidden;
     cursor: pointer;
@@ -74,6 +77,8 @@
     width:100%;
     height:100%;
     object-fit: cover;
+    position: absolute;
+    top: 30px;
 }
 .jobs{
     display: flex;
@@ -142,7 +147,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 1rem;
-        margin-left: 70px;
+        margin-left: 73px;
         margin-top: 10px;
         /* text-align: center; */
     }
