@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { FaFacebook } from "react-icons/fa";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -118,13 +118,31 @@ function Home() {
 
               </p> 
               <Link to="/apply/" className="btn btn-primary py-3 px-5">Apply Now</Link>
+            </h1>
+           </div>
+           <div className=' social-icons'>
+            <ul >
+              <p className=' icons'>
+                Follow us on:
+
+              <li>
+                <a href="https://facebook.com">facebook</a>
+                <FaFacebook />
+              </li>
+              <li>
+                <a href="https://youtube.com">youtube</a>
+              </li>
+              <li>
+                <a href="https://instagram.com">instagram</a>
+              </li>
+              </p>
+            </ul>
+           </div>
 
               
-            </h1>
         
 
 
-           </div>
         <div  className=' images-flex'>
         {/* <button className='job-post'>post job</button>   */}
            <img src={images10} alt='flex'/>
