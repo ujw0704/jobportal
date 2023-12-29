@@ -30,26 +30,124 @@
     letter-spacing: 8px;
     line-height: 60px;
     font-size: 25px;
-    /* font-style: normal; */
-    /* filter: drop-shadow(-3px -3px rgba(225,225,225,0,3)),
-                      5px 5px 5px rgba(0,0,0, 0,2),
-                      15px 15px rgba(0,0, 0,0,2); */
-   
-    padding:40px;
+     font-style: roman; 
+     padding:40px;
+    }
 
+    .findjob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+   
+
+    .bestjob {
+        color: #31a85f;
+  
+        /* background:#f5f7fa; */
+        border: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+        border-bottom: 2.5px solid rgb(131, 33, 33); 
+        border-radius: 4px;
+        margin-left:330px ;
+        margin-top: 50px;
+
+        &:hover{
+            transition: all 0.5s ease;
+            transform: scale(1.1);
+            color:white;
+            background:#20978b(131, 33, 33);
+            width: auto;
+            }
+            
+        
+    }
+   
+
+
+
+ .social-icons{
+    position: absolute;
+    bottom:-90px;
+    left: 260px;
+    transform: translateX(-50%);
+     /* z-index:1;  */
+    display:flex;
+    justify-content: space-around;
+    width:max-content;
+    /* border: 1px solid black; */
 
  }
+   
+ .social-icons a{
+    margin: 10px ;
+    transition: all 0.3s ease-in-out;
+    color:white;
+    opacity: 0.6;
+    height: 20px;
+    width: 90px;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 10px rgba(31, 29, 29, 0.7);
+    margin-left:-10px ;
+    padding: 5px;
+    &:hover {
+        color:white;
+        opacity: 1;
+        box-shadow: none;
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+      
+    }
+}
+
+.social-icons a.facebook{
+     background-color: #2e3abc;
+    animation: fb 1s infinite;
+    transform: scale(.8);
+    
+    border-bottom:5px solid black;
+
+   
+ }
+ 
+ 
+
+ .social-icons a.youtube{
+    background-color: #bc2e3c;
+   animation: fb 1s infinite;
+   transform: scale(.8);
+   border-bottom:5px solid black;
+  
+  
+}
+
+.social-icons a.instagram{
+    background-image: linear-gradient(to right, #254dac,rgb(25, 154, 83));
+   animation: fb 1s infinite;
+   transform: scale(.8);
+   border-bottom:5px solid black ;
+  
+}
+
  
  .images-flex{
      display: flex;
       opacity: 3;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items:center;
     height:300px;
     width:300px;
-    margin-left: 450px;
-
+    /* margin-left: 450px; */
+    /* margin-bottom: 120px; */
+    margin-top: 90px;
+   
     
+   
     
 }
 .images-flex img{
@@ -63,15 +161,25 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
 
  }
+
+ 
+ 
 .swiper_container{
-    width:60%;
-    height:360px;
+    width:400px;
+    height:400px;
     overflow: hidden;
     cursor: pointer;
-    position: relative
+    position: relative;
     /* background:#eaeefb; */
+    opacity: 0.2;
+     /* border-radius: 80%;  */
+
+}
+.swiper_container:hover{
+    opacity: 1;
 }
 .swiper_container img{
     width:100%;
@@ -79,6 +187,7 @@
     object-fit: cover;
     position: absolute;
     top: 30px;
+    
 }
 .jobs{
     display: flex;
@@ -86,6 +195,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 200px;
+    margin-top: 80px;
     
 
 

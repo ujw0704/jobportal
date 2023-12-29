@@ -2,11 +2,14 @@ import React from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import {  EffectCoverflow,  Pagination, Navigation } from 'swiper/modules';
+
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -21,26 +24,39 @@ import  images8  from './images/fleximages3.jpg';
 import images9 from "./images/i.t2.jpeg"
 import images10 from  "./images/fleximage1.jpg"
 import images11 from "./images/i.t4.jpeg"
- import { Link } from 'react-browser-router';
+//  import { Link } from 'react-browser-router';
 
 
 
 
 
 function Home() {
-
+ 
   const [text] = useTypewriter({
-    words: ['welcome to Nippon carreer!'   ],
+    words: ['welcome to kyodai carreer!' ],
     loop: 0,
     onLoopDone: () => console.log(`loop completed after infinte runs.`)
   })
   
   return (
     <div className="home-continer">
-     
-
+        <div className='homecontent'>
+          
+          <h1>hello</h1>
+          <p >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+               ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                      </p>
+        </div>
+       
 
         <section>
+         
           
         <Swiper
         effect={'coverflow'}
@@ -63,8 +79,11 @@ function Home() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
         >
+       
+        
         <SwiperSlide>
-          <img src={images1} alt="slide_image" />
+          <img src={images1}  alt="slide_image" />
+          <p>Your Text 1</p>
         </SwiperSlide>
        
         <SwiperSlide>
@@ -95,13 +114,14 @@ function Home() {
         </SwiperSlide>
           
         <div className="slider-controler">
+        
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </div>
           <div className="swiper-button-next slider-arrow">
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination"></div> 
           </div>
         </Swiper>
         </section>
@@ -109,16 +129,22 @@ function Home() {
         </div>
          <div className='typewriter'>
     <h1>{text} 
+    <p className='bestjob'>Best  Job in  Japan  at your Finger Tips</p>
     </h1> 
-           <div>
+           <div className='findjob'>
             <h1>
              Find jobs
             
-               <p>
+               
+                <p className='bestjob'>
 
-              </p> 
-              <Link to="/apply/" className="btn btn-primary py-3 px-5">Apply Now</Link>
+              Technical Skill
+                </p>
+               
             </h1>
+              
+              {/* <Link to="/apply/" className="btn btn-primary py-3 px-5">Apply Now</Link> */}
+      </div>
            </div>
            <div className=' social-icons'>
             <ul >
@@ -126,14 +152,14 @@ function Home() {
                 Follow us on:
 
               <li>
-                <a href="https://facebook.com">facebook</a>
-                <FaFacebook />
+                <a  className="facebook"href="https://facebook.com">facebook<FaFacebook /></a>
+               
               </li>
               <li>
-                <a href="https://youtube.com">youtube</a>
+                <a  className="youtube"href="https://youtube.com">youtube<FaYoutube/></a>
               </li>
               <li>
-                <a href="https://instagram.com">instagram</a>
+                <a  className ="instagram"href="https://instagram.com">instagram<FaInstagram/></a>
               </li>
               </p>
             </ul>
@@ -141,15 +167,27 @@ function Home() {
 
               
         
-
+           
 
         <div  className=' images-flex'>
+          
         {/* <button className='job-post'>post job</button>   */}
-           <img src={images10} alt='flex'/>
+           <img src={images10}  alt='flex'/>
+           <img src={images8} alt='flex'/>
+           <img src={images6} alt='flex'/>
+           
+        </div>
+        <p className='bestjob' style={{ marginLeft:"472px", width:"fit-content"}}>NoN-Technical Skill</p>
+        <div className='images-flex'>
+        <img src={images10} alt='flex'/>
            <img src={images8} alt='flex'/>
            <img src={images6} alt='flex'/>
         </div>
-      </div>
+          
+        
+        
+        
+
        
       < h4>Why Nippon Career</h4>
       <div className='jobs'>
@@ -168,7 +206,7 @@ function Home() {
     </div>
     <div className='discrpition'>
     <div  className ="icons">
-    <ContentPasteSearchIcon  />;
+    <ContentPasteSearchIcon  />
     </div>
       <h1>Jobs appear in search results</h1>
       <p> Nippon carrier matches the job description and location to the keywords.</p>
@@ -185,5 +223,4 @@ function Home() {
       </div>
   )
 }
-
 export default Home

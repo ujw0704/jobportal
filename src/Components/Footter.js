@@ -20,7 +20,7 @@ function Footter() {
             <Link to="/term&condition">Term&Condition</Link>
           </li>
           <li>
-            <Link to="/follow us">Follow Us</Link>
+            <Link to="/Searchjob">Follow Us</Link>
           </li>
           <li>
             <Link to="/help center"> Helpcenter</Link>

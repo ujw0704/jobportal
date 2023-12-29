@@ -146,17 +146,19 @@ button {
 }
 
 button:hover {
-    background-color: #282929; 
+    background-color: #20b4b4; 
 }
 
 .password-toggle{
     position: absolute;
-    top: 5px;
+     top: 5px; 
     right: 10px;
     width: 20px;
     height: 20px;
-    outline: none;
-    border: none;
+     outline: none; 
+     border-radius: 50%;
+     background-image: linear-gradient(to right, #1dc0af,black);  
+     
     font-size: 1em;
    
     

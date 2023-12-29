@@ -9,9 +9,10 @@ function Header() {
         <ul>
           <li>
             <p>
-              <span>Nippon</span>
-              <hr />
-              <span>Career</span>
+              <span className='logo'>kyodai</span>
+               
+              <span className='logo'>Career</span>
+               
             </p>
           </li>
 
