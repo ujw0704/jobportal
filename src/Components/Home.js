@@ -42,15 +42,17 @@ function Home() {
     <div className="home-continer">
         <div className='homecontent'>
           
-          <h1>hello</h1>
+          <h1>kyodai carreer</h1>
+          
+          <strong>Connecting Dreams, Bridging Careers: Your Gateway to Professional Success in Japan.</strong><br/>
+          <span>powered by </span>
+          <hr></hr>
+          <span>yokohama bussiness group Ltd</span>
           <p >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-               ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            Unlesh a new era and to be unstoppable momentum in japan
+            <br/>
+            Empowering Futures, One Opportunity at a Time: Where Your Career Journey Begins in Japan!
+         
                       </p>
         </div>
        
@@ -83,7 +85,7 @@ function Home() {
         
         <SwiperSlide>
           <img src={images1}  alt="slide_image" />
-          <p>Your Text 1</p>
+          
         </SwiperSlide>
        
         <SwiperSlide>
