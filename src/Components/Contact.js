@@ -1,4 +1,5 @@
 import React ,{useState}from "react"
+
 import "./Contact.css"
 function Contact(){
 const [form ,setFormData] = useState({
@@ -11,9 +12,8 @@ const handleChange= (e) => {
     }
  const  handleSubmit =(e)=>{
  e.preventDefault()
- }
-
-
+ 
+}
 
 return(
     <div className="contact">
@@ -29,10 +29,21 @@ return(
 
     <button type="submit">Submit</button>
      </div>
-    </form>
 
+    </form>
     
     
+    <iframe
+          title="Google Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14271.467880172038!2d88.19931527634539!3d26.588643818005895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4527c5331f88f%3A0xa2af6841ad280add!2sSalbari%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1704030028624!5m2!1sen!2sin"
+          width="500"
+          height="350"
+          style={{ border: 0, marginRight:"200px" }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
 
 
         </div>

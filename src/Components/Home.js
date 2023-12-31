@@ -9,7 +9,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import {  EffectCoverflow,  Pagination, Navigation } from 'swiper/modules';
-
+import ReactPlayer from 'react-player';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -24,14 +24,16 @@ import  images8  from './images/fleximages3.jpg';
 import images9 from "./images/i.t2.jpeg"
 import images10 from  "./images/fleximage1.jpg"
 import images11 from "./images/i.t4.jpeg"
-//  import { Link } from 'react-browser-router';
+import jobsearch from "./images/jobsearch.mp4"
+//  import jobsearch from "./viedoclip/jobsearch.mp4"
+import { Link } from 'react-browser-router';
 
 
 
 
 
 function Home() {
- 
+  
   const [text] = useTypewriter({
     words: ['welcome to kyodai carreer!' ],
     loop: 0,
@@ -40,22 +42,27 @@ function Home() {
   
   return (
     <div className="home-continer">
-        <div className='homecontent'>
-          
-          <h1>kyodai carreer</h1>
-          
-          <strong>Connecting Dreams, Bridging Careers: Your Gateway to Professional Success in Japan.</strong><br/>
+   
+   <div className='homecontent'>
+         <ReactPlayer url={jobsearch} width="100%" height="100%" controls /> 
+        <div className="video-overlay">
+  
+          <h1>kyodai career</h1>
+          <strong>Connecting Dreams, Bridging Careers: Your Gateway to Professional Success in Japan.</strong>
+          <br />
           <span>powered by </span>
-          <hr></hr>
-          <span>yokohama bussiness group Ltd</span>
-          <p >
-            Unlesh a new era and to be unstoppable momentum in japan
-            <br/>
+          <span>yokohama business group Ltd</span>
+          <hr />
             Empowering Futures, One Opportunity at a Time: Where Your Career Journey Begins in Japan!
-         
-                      </p>
-        </div>
        
+   <Link className='job-post'>post job</Link>  
+         
+          
+            <br />
+          <Link to="/apply/" >Apply Now</Link> 
+          
+        </div>
+      </div>
 
         <section>
          
@@ -145,14 +152,13 @@ function Home() {
                
             </h1>
               
-              {/* <Link to="/apply/" className="btn btn-primary py-3 px-5">Apply Now</Link> */}
       </div>
            </div>
            <div className=' social-icons'>
             <ul >
               <p className=' icons'>
                 Follow us on:
-
+               
               <li>
                 <a  className="facebook"href="https://facebook.com">facebook<FaFacebook /></a>
                
@@ -173,7 +179,6 @@ function Home() {
 
         <div  className=' images-flex'>
           
-        {/* <button className='job-post'>post job</button>   */}
            <img src={images10}  alt='flex'/>
            <img src={images8} alt='flex'/>
            <img src={images6} alt='flex'/>
@@ -191,7 +196,7 @@ function Home() {
         
 
        
-      < h4>Why Nippon Career</h4>
+      < h4>Why kyodai Career</h4>
       <div className='jobs'>
 
     <div className='discrpition' >

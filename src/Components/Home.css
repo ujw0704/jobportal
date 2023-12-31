@@ -71,13 +71,14 @@
 
  .social-icons{
     position: absolute;
-    bottom:-90px;
+    top:950px;
     left: 260px;
     transform: translateX(-50%);
-     /* z-index:1;  */
+      z-index:1;  
     display:flex;
     justify-content: space-around;
     width:max-content;
+    /* margin-top: 50px; */
     /* border: 1px solid black; */
 
  }
@@ -146,14 +147,17 @@
     /* margin-left: 450px; */
     /* margin-bottom: 120px; */
     margin-top: 90px;
-   
+    /* gap: 20px; */
     
-   
+    
+    
+    
     
 }
 .images-flex img{
     margin: 90px;
-     margin-right:10px ;
+    margin-right:10px ;
+   
    
     box-shadow:  10px 10px 10px rgba(0,0,0,.5);
     border-radius: 10px;
@@ -167,17 +171,64 @@
  }
 
  
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: snow;
+  }
+  
+  .video-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .video-overlay strong {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .video-overlay span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .video-overlay hr {
+    border: 1.5px solid rgba(19, 187, 100, 0.817);
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+  .video-overlay p {
+    font-size: 2.5em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+ 
+  
  
 .swiper_container{
-    width:350px;
-    height:350px;
+    margin-top: 20px;
+    width:400px;
+    height:400px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
     /* background:#eaeefb; */
     opacity: 0.2;
-     /* border-radius: 80%;  */
-
+    /* border-radius: 100%;   */
+    
 }
 .swiper_container:hover{
     opacity: 1;
@@ -257,9 +308,9 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
         margin-left: 73px;
-        margin-top: 10px;
+        margin-top: 10px; 
         /* text-align: center; */
     }
 

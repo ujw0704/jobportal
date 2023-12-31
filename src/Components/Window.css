@@ -1,0 +1,35 @@
+.scroll-container {
+    position: fixed;
+    bottom: 5px;
+    left: 15px;
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+
+.scroll {
+    cursor: pointer;
+    text-align: center;
+    background-color: #1cb952; 
+    color:rgb(17, 172, 110);
+    padding: 20px ;
+    transition: background-color 0.3s ease;
+}
+
+.scroll:hover {
+    color: antiquewhite;
+}
+
+.favicn{
+    font-size: 15px;
+    margin: auto 0;
+    /* line-height: 5px; */
+    /* display: inline-block; */
+    vertical-align: middle;
+    
+    }
+
+
+ 
