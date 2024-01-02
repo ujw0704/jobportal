@@ -25,9 +25,16 @@ function Header() {
           </li>
 
           
-          {/* <li>
-            <Link to="/register">Register</Link>
-          </li> */}
+            <li>
+            <Link to="/Searchjob">Register</Link>
+          
+
+
+
+
+
+            
+          </li>  
 
           <li>
             <Link to="/about">About-us</Link>

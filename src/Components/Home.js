@@ -227,6 +227,7 @@ function Home() {
       <p>Sponsored Jobs appear higher in search results while free listings lose visibility</p>
     </div>
     </div>
+    <div></div>
       </div>
   )
 }

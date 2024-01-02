@@ -1,101 +1,86 @@
-// import React from 'react';
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
 
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
+import React, { useState } from 'react';
+ import "./Searchjob.css"
+function Searchjob() {
+  const locations = ["Japan"];
+  const workTypes = ['Full-time', 'Part-time', 'Remote'];
+  const experienceLevels = ['Entry-level', 'Mid-level', 'Senior'];
+  const jobTitles = ["FULLSTACK", "BLOCKCHAIN", "DATA SCIENTIST", "LOT", "COMPUTER VISION", "UI/UX DESIGINER", "MECHANICAL ENGINEERING", "INDUSTRIAL ENGINEERING", "ARCHITECTURE", "INFRASTRUCTURE / CIVIL ENGINEERING", "NURSING CARE-GIVER", "AGRICULTURE", "AVIATION", "HOSPITALITY", "Automobile Engineer"];
 
-// import './style.css';
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedWorkType, setSelectedWorkType] = useState('');
+  const [selectedExperience, setSelectedExperience] = useState('');
+  const [selectedJob, setSelectedJob] = useState('');
 
-// // import required modules
-// import { Parallax, Pagination, Navigation } from 'swiper/modules';
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-// export default function App() {
-//   return (
-//     <>
-//       <Swiper
-//         style={{
-//           '--swiper-navigation-color': '#fff',
-//           '--swiper-pagination-color': '#fff',
-//         }}
-//         speed={600}
-//         parallax={true}
-//         pagination={{
-//           clickable: true,
-//         }}
-//         navigation={true}
-//         modules={[Parallax, Pagination, Navigation]}
-//         className="mySwiper"
-//       >
-//         <div
-//           slot="container-start"
-//           className="parallax-bg"
-//           style={{
-//             'background-image':
-//               'url(https://swiperjs.com/demos/images/nature-1.jpg)',
-//           }}
-//           data-swiper-parallax="-23%"
-//         ></div>
-//         <SwiperSlide>
-//           <div className="title" data-swiper-parallax="-300">
-//             Slide 1
-//           </div>
-//           <div className="subtitle" data-swiper-parallax="-200">
-//             Subtitle
-//           </div>
-//           <div className="text" data-swiper-parallax="-100">
-//             <p >
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-//               dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-//               laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-//               Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-//               Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-//               ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-//               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-//             </p>
-//           </div>
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <div className="title" data-swiper-parallax="-300">
-//             Slide 2
-//           </div>
-//           <div className="subtitle" data-swiper-parallax="-200">
-//             Subtitle
-//           </div>
-//           <div className="text" data-swiper-parallax="-100">
-//             <p>
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-//               dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-//               laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-//               Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-//               Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-//               ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-//               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-//             </p>
-//           </div>
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <div className="title" data-swiper-parallax="-300">
-//             Slide 3
-//           </div>
-//           <div className="subtitle" data-swiper-parallax="-200">
-//             Subtitle
-//           </div>
-//           <div className="text" data-swiper-parallax="-100">
-//             <p>
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-//               dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-//               laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-//               Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-//               Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-//               ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-//               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-//             </p>
-//           </div>
-//         </SwiperSlide>
-//       </Swiper>
-//     </>
-//   )
-//         }
+    const searchQuery = {
+      location: selectedLocation,
+      workType: selectedWorkType,
+      experienceLevel: selectedExperience,
+      jobTitle: selectedJob,
+    };
+
+    console.log('Search Query:', searchQuery);
+  };
+
+  return (
+    <div className='Search-Container'>
+      <form  className='sreach-form' onSubmit={handleSubmit}>
+        <label>
+          Location:
+          <select  className ="job-opt"value={selectedLocation} onChange={(e) => setSelectedLocation(e.target.value)}>
+            
+            <option  className ="jobs"value="">Select location</option>
+            {locations.map((location, index) => (
+              <option key={index} value={location}className={selectedLocation===location ? 'selected-option' : ''}>
+                {location}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          Work Type:
+          <select className='job-opt' value={selectedWorkType} onChange={(e) => setSelectedWorkType(e.target.value)}>
+            <option className='jobs' value="">Select work type</option>
+            {workTypes.map((workType, index) => (
+              <option key={index} value={workType}className={selectedWorkType===workType ? 'selected-option' : ''}>
+                {workType}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          Experience Level:
+          <select  className='job-opt'value={selectedExperience} onChange={(e) => setSelectedExperience(e.target.value)}>
+            <option  className ='jobs' value="">Select experience level</option>
+            {experienceLevels.map((experience, index) => (
+              <option key={index} value={experience}className={selectedExperience === experience  ? 'selected-option' : ''}>
+                {experience}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          Job Title:
+          <select className='job-opt' value={selectedJob} onChange={(e) => setSelectedJob(e.target.value)}>
+            <option className='jobs' value="">Select job title</option>
+            {jobTitles.map((job, index) => (
+              <option key={index} value={job} className={selectedJob === job ? 'selected-option' : ''}>
+                { job}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <button className='job-btons' type="submit">Search</button>
+      </form>
+    </div>
+  );
+}
+
+export default Searchjob;
