@@ -12,14 +12,14 @@
 .scroll {
     cursor: pointer;
     text-align: center;
-    background-color: #1cb952; 
+    background-color: #13a044; 
     color:rgb(17, 172, 110);
     padding: 20px ;
     transition: background-color 0.3s ease;
 }
 
 .scroll:hover {
-    color: antiquewhite;
+    color: rgb(19, 25, 192);
 }
 
 .favicn{

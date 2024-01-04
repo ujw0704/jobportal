@@ -20,16 +20,17 @@
     color:#31846f;
     font-size: 28px;
     line-height: 25px;
-    letter-spacing: -0.03em;
+    /* letter-spacing: -0.03em; */
     font-weight: bold;
     margin-bottom: 24px;
     }
 .about-section p{
     color:#31846f;
     font-size: 20px;
-    line-height: 24px;
+    /* line-height: 24px; */
     /* opacity: .6; */
     margin-bottom: 48px;
+    margin-right: 250px;
     }
 .right-img{
     position: relative;
@@ -38,7 +39,7 @@
  display: flex;
  flex-wrap: wrap;
  flex-direction: row;
-   max-width: 300px;
+   max-width: 350px;
    margin-right: 60px;
    margin-bottom: 290px;
    box-shadow: 10px 10px 5px black;

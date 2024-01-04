@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Login.css";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Login() {
   const [formData, setFormData] = useState({
     name: "",
@@ -71,7 +71,7 @@ function Login() {
         </div>
         <button type='submit'>LOGIN</button> 
       <div className='register'>
-        Don't have an account?<a href="/register">Sign Up!</a>
+      Don't have an account? <Link to="/register">Sign Up!</Link>
       </div>
       </form>
 
