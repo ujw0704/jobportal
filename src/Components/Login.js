@@ -40,8 +40,8 @@ function Login() {
 
 
      
-        <h2>Welcome Back</h2>
-        <div className="input-container"> 
+        <h2 className='login-header'>Welcome Back</h2>
+        <div className="login"> 
           <input 
             type='text' 
             name="name" 
@@ -50,9 +50,9 @@ function Login() {
             required 
             onChange={handleChange} 
             />
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username" >Username</label>
         </div>
-        <div className="input-container"> 
+        <div className="login"> 
           <input 
             type={showPassword ? 'text' : 'password'} 
             name='password' 
@@ -61,7 +61,7 @@ function Login() {
             required 
             onChange={handleChange} 
             />
-          <label htmlFor='password'>Password</label> 
+          <label htmlFor='password' >Password</label> 
           <span 
             className="password-toggle" 
             onClick={togglePasswordVisibility}

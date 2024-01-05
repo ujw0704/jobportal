@@ -26,7 +26,7 @@ function Register() {
           <form onSubmit={handleSubmit} >
   
              <div className='register'>
-              <h2>Register Here</h2>
+              <h2 className='heder-register'>Register Here</h2>
               <div className='register'>
   
             <input type='text' name='username' placeholder='enter your username' value={formData.username} required onChange={handleChange}/>
@@ -54,7 +54,7 @@ function Register() {
            <label htmlFor='password'>passsword</label>
            </div>
             </div>
-            <button className='btn' type='submit'>submit</button>
+            <button  type='submit'>submit</button>
           </form>
       </div>
     )

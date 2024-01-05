@@ -7,11 +7,13 @@ import About from "./Components/About";
 import Header from "./Components/Header";
 import Contact from "./Components/Contact";
 import Home from "./Components/Home";
-import Searchjob from "./Components/Searchjob";
+import Searchjob from "./Components/Searchjob"
 import Footter from "./Components/Footter";
 import WindowScroll from "./Components/WindowScroll";
-// import { Dropdown } from "reactsuits";
+import Helpcenter from "./Components/Helpcenter";
+// import Side from "./Components/Side";
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
+// import { HelpCenter } from "@mui/icons-material";
 
 
 
@@ -29,9 +31,10 @@ function App() {
         <Route path='/about' element= {<About/>} />
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/Searchjob" element={<Searchjob/>}/>
+        <Route path ="/Helpcenter" element={<Helpcenter/>}/>
         </Routes>
+          
         <Footter/>
-      
         </BrowserRouter>
      
     </div>

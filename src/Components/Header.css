@@ -88,8 +88,13 @@
     transition: width 0.3s ease-in-out
 }
 
+
 .navlink:hover{
     color: #4923a1;
+    
+}
+.navbar-nav .nav-link {
+    color: white !important;
     
 }
       

@@ -51,7 +51,7 @@
         font-size: 20px;
         border-bottom: 2.5px solid rgb(16, 179, 68); 
         border-radius: 4px;
-        margin-left:330px ;
+        /* margin-left:330px ; */
         margin-top: 50px;
         /* background-image: linear-gradient(to right, #254dac,rgb(25, 154, 83)); */
 
@@ -80,7 +80,15 @@
     width:max-content;
     /* margin-top: 50px; */
     /* border: 1px solid black; */
+    text-decoration: none;
 
+ }
+ .social-icons p{
+    
+    color: #1dc0af;
+ }
+ .social-icons li{
+    list-style:none;
  }
    
  .social-icons a{
@@ -95,7 +103,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 15px 10px rgba(31, 29, 29, 0.7);
-    margin-left:-10px ;
+    margin-right:350px ;
     padding: 5px;
     &:hover {
         color:white;
@@ -103,7 +111,7 @@
         box-shadow: none;
         transform: scale(1.2);
         transition: transform 0.3s ease-in-out;
-      
+        
     }
 }
 
@@ -129,7 +137,7 @@
 }
 
 .social-icons a.instagram{
-    background-image: linear-gradient(to right, #254dac,rgb(25, 154, 83));
+    background-image: linear-gradient(to right, #254dac,rgb(168, 160, 113));
    animation: fb 1s infinite;
    transform: scale(.8);
    border-bottom:5px solid black ;

@@ -16,10 +16,10 @@ body{
     
 }
 .register{
-    top: 30px;
+    top: 10px;
 }
 
-h2{
+.heder-register{
    
  
      font-family: "italic";
@@ -97,7 +97,7 @@ h2{
 }
 form {
     width: 320px; 
-     margin: 20px auto;
+     margin-bottom: 20px auto;
      text-align: center;
      /* border: 1px solid rgb(196, 114, 114); */
      display: flex;
@@ -112,21 +112,22 @@ form {
      border-radius: 30px; 
      z-index: 998;
      height: 350px;
+     /* margin-bottom: 100px; */
 } 
 .btn{
 
-    padding: 0.625rem 1rem;
+    /* padding: 0.625rem 1rem; */
     background-color: #1a27bc;
     color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
      border-radius: 5px; 
-    margin-bottom: 65px;
+  
     width: 500px;
-        margin-top:10px 
+    height: 20px;
     
 }
-button:hover{
+.btn:hover{
     background-color: #282929; 
 }

@@ -138,7 +138,7 @@ function Home() {
         </div>
          <div className='typewriter'>
     <h1>{text} 
-    <p className='bestjob'>Best  Job in  Japan  at your Finger Tips</p>
+   
     </h1> 
            <div className='findjob'>
             <h1>
