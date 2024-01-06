@@ -39,19 +39,19 @@
     }
     
     
-    
     .logo{
         
-        background-image: linear-gradient(to right, #1dc0af,black);  
+        /* background-image: linear-gradient(to right, #1dc0af,black);   */
         color: white;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         height: 100px;
         width: 100px;
-        padding: 9px;
+        padding: 3px;
+        font-weight: 200px;
         
-        border-radius:50% ;  
+        /* border-radius:50% ;  
         border-bottom: 5px solid black;
-        border-top: 5px solid green; 
+        border-top: 5px solid green;  */
         
         
     }
@@ -60,7 +60,9 @@
     .navs{
         margin-left: 550px;
         font-size: 20px;
-        padding: 20px;
+        padding: 50px;
+      
+       
       
         position: relative;
         line-height: 60px;
@@ -95,7 +97,6 @@
 }
 .navbar-nav .nav-link {
     color: white !important;
-    
 }
       
 .custom-dropdown-title {

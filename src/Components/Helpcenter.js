@@ -14,7 +14,7 @@ function Helpcenter() {
       <div className='helpcontainer'>
         <div className='helpbox'>
 
-     <button  className ="Helpbutton"onClick={handleSubmit}>need help</button>
+     <button  className ="Helpbutton"onClick={handleSubmit}>Need Help</button>
      <div className={isShown ? 'display-block' : 'display-none'}>
         <h2>
             Need Help? Contact Us!

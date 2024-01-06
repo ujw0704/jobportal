@@ -49,7 +49,7 @@ function Home() {
   
           <h1>kyodai career</h1>
           <strong>Connecting Dreams, Bridging Careers: Your Gateway to Professional Success in Japan.</strong>
-          <br />
+        
           <span>powered by </span>
           <span>yokohama business group Ltd</span>
           <hr />

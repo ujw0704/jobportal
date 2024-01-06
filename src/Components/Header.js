@@ -13,6 +13,7 @@ function Header() {
       <Navbar bg="light" expand="lg">
         <Navbar.Brand className='logohead'>
           <span className='logo'>kyodai</span>
+          
           <span className='logo'>Career</span>
         </Navbar.Brand>
 
@@ -31,8 +32,8 @@ function Header() {
               <NavDropdown.Item as={Link} to="/Searchjob" >Searchjob</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="/about"className='navlink'>About-us</Nav.Link>
-            {/* <Nav.Link as={Link} to="/contact"className='navlink'>Contact-us</Nav.Link> */}
+            <Nav.Link as={Link} to="/about"className='navlink'>Find cv</Nav.Link>
+            <Nav.Link as={Link} to="/Employers"className='navlink' style={{background:"#bbe4e9", borderRadius:"50px",height:"50px", marginTop:"12px" , width:"120px" , textAlign:"center", padding:"0px"}}>Employer</Nav.Link>
             
           </Nav>
         </Navbar.Collapse>
