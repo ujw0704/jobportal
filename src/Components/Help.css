@@ -17,15 +17,18 @@ html, body {
     align-items: center;
     /* overflow-x: none; */
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .helpbox {
     position: absolute;
-    left: 83%;
-    width: 200px;
-    height: 20px;
-    background-color: #f2f2f2;
-    border: solid #c9c9c9;
+    /* left: 83%; */
+    width: 200px;  
+ height: 150px;  
+top:50%;
+right:30%;
+    /* background-color: #f2f2f2; */
+    /* border:  1px solid #1e622f; */
     z-index: 3;
     text-align: center;
 }
@@ -40,16 +43,16 @@ html, body {
 
 .helpbox h2 {
     font-size: 20px;
-    padding: 5px;
+    padding: 3px;
     color: #000;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .helpbox ul {
     text-align: center;
     /* margin: 5px; */
-    outline-color: rgb(17, 104, 104);
-   margin: 0 auto;
+    /* outline-color: rgb(17, 104, 104); */
+   
     
    
     
@@ -59,15 +62,18 @@ html, body {
     padding: 0px;
     letter-spacing: 1px;
     font-size: 17px;
-    color: white!important;
+    /* color: white!important; */
     margin-right: 0px;
     display: block; 
     text-decoration: none !important;
+    margin: 0px;
+   
 }
 .Helpbutton{
-    width: 200px;
-    height: 20px;
-   
+    width: 120px!important;
+    height: 25px;
+    border-radius: 10px;
+  
   
 
 
@@ -75,4 +81,8 @@ html, body {
 
 .helpbox ul li a {
     text-decoration: none !important;
+   
+    margin-left: 0px;
+    margin-right: 0px;
+
 }

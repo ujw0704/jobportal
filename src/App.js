@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React from "react";
+
+import React, { createContext,useState} from "react";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import About from "./Components/About";
@@ -19,10 +20,15 @@ import { BrowserRouter , Routes, Route } from 'react-router-dom'
 
 
 
+
+  export const context = createContext({})
+
 function App() {
+  const [isShown, setIsShown] = useState(true);
   return (
     <div className="App">
-    
+    <context.Provider value={{isShown,setIsShown}}>
+
         <BrowserRouter>
         <Header />
           <WindowScroll/>
@@ -41,6 +47,7 @@ function App() {
           
         <Footter/>
         </BrowserRouter>
+    </context.Provider>
      
     </div>
 

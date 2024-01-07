@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useContext, useEffect}from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaFacebook } from "react-icons/fa";
@@ -26,24 +26,26 @@ import images10 from  "./images/fleximage1.jpg"
 import images11 from "./images/i.t4.jpeg"
 import jobsearch from "./images/jobsearch.mp4"
 //  import jobsearch from "./viedoclip/jobsearch.mp4"
-import { Link } from 'react-browser-router';
-
-
-
+// import { Link } from 'react-browser-router';
+ import { context} from "../App"
 
 
 function Home() {
-  
+  const { isShown } = useContext(context)
+
   const [text] = useTypewriter({
     words: ['welcome to kyodai carreer!' ],
     loop: 0,
     onLoopDone: () => console.log(`loop completed after infinte runs.`)
   })
+  useEffect(()=>{
+    
+  },[isShown])
   
   return (
     <div className="home-continer">
    
-   <div className='homecontent'>
+    <div className='homecontent'> 
          <ReactPlayer url={jobsearch} width="100%" height="100%" controls /> 
         <div className="video-overlay">
   
@@ -55,13 +57,13 @@ function Home() {
           <hr />
             Empowering Futures, One Opportunity at a Time: Where Your Career Journey Begins in Japan!
        
-   <Link className='job-post'>post job</Link>  
+   {/* <Link className='job-post'>post job</Link>   */}
          
           
             <br />
-          <Link to="/apply/" >Apply Now</Link> 
+          {/* <Link to="/apply/" >Apply Now</Link>  */}
           
-        </div>
+        </div> 
       </div>
 
         <section>
@@ -104,10 +106,7 @@ function Home() {
         <SwiperSlide>
           <img src={images9} alt="slide_image" />
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <img src={images10} alt="slide_image" />
-          </SwiperSlide>
-        */}
+    
         <SwiperSlide>
           <img src={images2} alt="slide_image" />
         </SwiperSlide>

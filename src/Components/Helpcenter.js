@@ -1,13 +1,14 @@
-import React ,{useState}from 'react'
+import React ,{useContext}from 'react'
  import "./Help.css"
- import {Link} from "react-browser-router"
+ import { Link} from 'react-router-dom'
+ import { context} from "../App"
 function Helpcenter() {
-    const [isShown, setIsShown] = useState(true);
-
+    const {isShown, setIsShown} = useContext(context);
+   
 
     function handleSubmit(){
         setIsShown((current => !current))
-
+       
     }
 
   return (
@@ -20,11 +21,11 @@ function Helpcenter() {
             Need Help? Contact Us!
             <ul>
                 <li>
-                    <Link to ="/contact">contact</Link>
+                    <Link to ="/contact">contact</Link><br></br>
                 </li>
-
+               
                 <li>
-                    <Link to ="/contact">contact</Link>
+                    <Link to ="/contact">Company Inquire</Link>
                 </li>
             </ul>
 

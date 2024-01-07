@@ -1,8 +1,15 @@
 import React from 'react'
  import "./Employer.css"
- 
-import { Link } from 'react-router-dom'
+
+import {  useNavigate } from 'react-router-dom'
 function Employer() {
+  const navigate = useNavigate();
+
+  const handleClick=(e)=>{
+    e.preventDefault()
+    navigate("/EmployerLogin")
+    
+  }
   return (
  
     <div className='employee-container'>
@@ -14,7 +21,7 @@ function Employer() {
      
          
 
-     <Link to="/EmployerLogin" className="employer-button">Start hiring</Link>
+     <button onClick={handleClick} className="employer-button">Start hiring</button>
     
     
 
