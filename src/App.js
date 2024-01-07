@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import React, { createContext,useState} from "react";
+import React, { createContext} from "react";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import About from "./Components/About";
@@ -11,7 +11,7 @@ import Home from "./Components/Home";
 import Searchjob from "./Components/Searchjob"
 import Footter from "./Components/Footter";
 import WindowScroll from "./Components/WindowScroll";
-import Helpcenter from "./Components/Helpcenter";
+// import Helpcenter from "./Components/Helpcenter";
 import Employers from "./Components/Employer";
 import EmployerLogin from "./Components/EmployerLogin";
 // import Side from "./Components/Side";
@@ -24,10 +24,10 @@ import { BrowserRouter , Routes, Route } from 'react-router-dom'
   export const context = createContext({})
 
 function App() {
-  const [isShown, setIsShown] = useState(true);
+  
   return (
     <div className="App">
-    <context.Provider value={{isShown,setIsShown}}>
+    <context.Provider value={{}}>
 
         <BrowserRouter>
         <Header />
@@ -39,7 +39,7 @@ function App() {
         <Route path='/about' element= {<About/>} />
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/Searchjob" element={<Searchjob/>}/>
-        <Route path ="/Helpcenter" element={<Helpcenter/>}/>
+        {/* <Route path ="/Helpcenter" element={<Helpcenter/>}/> */}
         <Route path ="/Employers" element={<Employers/>}/>
         <Route path ="/EmployerLogin" element={<EmployerLogin/>}/>
         

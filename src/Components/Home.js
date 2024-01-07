@@ -1,4 +1,4 @@
-import React ,{useContext, useEffect}from 'react'
+import React ,{useState}from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaFacebook } from "react-icons/fa";
@@ -14,6 +14,7 @@ import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import PlaceIcon from '@mui/icons-material/Place';
 import "./Home.css"
+
  import images1 from "./images/agriculter1.jpeg"
 import images2 from "./images/reactimg2.jpeg"
 import images3 from "./images/reactimg3.jpeg"
@@ -26,21 +27,24 @@ import images10 from  "./images/fleximage1.jpg"
 import images11 from "./images/i.t4.jpeg"
 import jobsearch from "./images/jobsearch.mp4"
 //  import jobsearch from "./viedoclip/jobsearch.mp4"
-// import { Link } from 'react-browser-router';
- import { context} from "../App"
+import { Link } from 'react-browser-router';
+//  import { context} from "../App"
 
 
 function Home() {
-  const { isShown } = useContext(context)
+  const [isShown, setIsShown] = useState(true);
 
   const [text] = useTypewriter({
     words: ['welcome to kyodai carreer!' ],
     loop: 0,
     onLoopDone: () => console.log(`loop completed after infinte runs.`)
   })
-  useEffect(()=>{
-    
-  },[isShown])
+ 
+    function handleSubmit(){
+      setIsShown((current => !current))
+     
+  }
+
   
   return (
     <div className="home-continer">
@@ -170,8 +174,29 @@ function Home() {
               </li>
               </p>
             </ul>
+            
            </div>
+           <div className='helpcontainer'>
+        <div className='helpbox'>
 
+     <button  className ="Helpbutton"onClick={handleSubmit}>Need Help</button>
+     <div className={isShown ? 'display-block' : 'display-none'}>
+        <h2>
+            Need Help? Contact Us!
+            <ul>
+                <li>
+                    <Link to ="/contact">contact</Link><br></br>
+                </li>
+               
+                <li>
+                    <Link to ="/contact">Company Inquire</Link>
+                </li>
+            </ul>
+
+        </h2>
+      </div>
+    </div>
+    </div>
               
         
            
@@ -226,7 +251,8 @@ function Home() {
       <p>Sponsored Jobs appear higher in search results while free listings lose visibility</p>
     </div>
     </div>
-    <div></div>
+    <div>
+    </div>
       </div>
   )
 }
