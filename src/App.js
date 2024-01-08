@@ -17,6 +17,7 @@ import EmployerLogin from "./Components/EmployerLogin";
 // import Side from "./Components/Side";
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
 // import { HelpCenter } from "@mui/icons-material";
+// import companyInquire from "./Components/companyInquire";
 
 
 
@@ -42,7 +43,7 @@ function App() {
         {/* <Route path ="/Helpcenter" element={<Helpcenter/>}/> */}
         <Route path ="/Employers" element={<Employers/>}/>
         <Route path ="/EmployerLogin" element={<EmployerLogin/>}/>
-        
+        <Route path="/companyInquire" element={<companyInquire/>}/>
         </Routes>
           
         <Footter/>

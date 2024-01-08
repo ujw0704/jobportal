@@ -180,7 +180,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-  
+   color: #1a27bc;
     clear: both;
     }.submit:disabled{
         opacity: .6;

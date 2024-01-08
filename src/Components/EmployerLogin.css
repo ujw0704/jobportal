@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+   
+
+}
+.Employer-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+label{
+ 
+    color:#4a4949;
+    font-size: 15px;
+    font-style: italic;
+    padding: px;
+ 
+    width: 70px;
+
+
+
+}
+input{
+    /* border: none;*/
+    outline: none;
+    background: #f6f7fb;
+    box-shadow: inset 0 3px 8px rgba(36,
+    37, 42,.1), 0 0 0 6px rg
+    ba(36, 37, 42);
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    font-size: 14px;
+    color: #4a4949;
+    border-radius: 10px;
+    padding: 5px;
+}
+.employerbtn{
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    display: inline-block;
+    text-align: center;
+    width: 190px!important;
+    margin: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #45b411;
+    border: none;
+    border-radius: 5px;
+    &:hover {background-color:#00ff40;}
+    &:active {
+        background-color: #11a357;
+        transform: translateY(1px);
+        }
+
+
+}
+.employe a {
+    text-decoration: none !important;
+   
+  
+    list-style-type: none !important;
+    height: 250px;
+    width: 250px;
+}

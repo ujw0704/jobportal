@@ -22,6 +22,7 @@ function Employer() {
          
 
      <button onClick={handleClick} className="employer-button">Start hiring</button>
+     <button onClick={handleClick} className="employer-button">post job</button><br></br>
     
     
 

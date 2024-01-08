@@ -16,3 +16,11 @@
     /* line-height: 60px;
      */
 }
+a{
+    text-decoration: none;
+    color: rgb(13, 79, 136)!important;
+}
+li{
+    list-style:none;
+    color: rgb(25, 165, 67);
+}
