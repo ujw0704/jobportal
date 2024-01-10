@@ -9,6 +9,7 @@
     align-items: center;
     height: calc(179vh - 64px);
     margin-left:30px ;
+    /* color: #000; */
     }
 .about-section{
     width: 75%;
