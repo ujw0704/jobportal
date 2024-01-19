@@ -14,8 +14,12 @@ import WindowScroll from "./Components/WindowScroll";
 // import Helpcenter from "./Components/Helpcenter";
 import Employers from "./Components/Employer";
 import EmployerLogin from "./Components/EmployerLogin";
+// import Post from "./Components/Post";
+import FindJob from "./Components/FindJob";
 // import Side from "./Components/Side";
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
+import SingleJobs from "./Components/SingleJobs";
+import ApplyJobs from "./Components/ApplyJobs";
 // import { HelpCenter } from "@mui/icons-material";
 // import companyInquire from "./Components/companyInquire";
 
@@ -40,10 +44,14 @@ function App() {
         <Route path='/about' element= {<About/>} />
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/Searchjob" element={<Searchjob/>}/>
-        {/* <Route path ="/Helpcenter" element={<Helpcenter/>}/> */}
+        {/* <Route path ="/Post" element={<Post/>}/> */}
         <Route path ="/Employers" element={<Employers/>}/>
         <Route path ="/EmployerLogin" element={<EmployerLogin/>}/>
         <Route path="/companyInquire" element={<companyInquire/>}/>
+        <Route path="/FindJob" element={<FindJob/>}/>
+        <Route path="/Single-Jobs/:jobId" element={<SingleJobs/>}/>
+        <Route path="/ApplyJobs" element={<ApplyJobs/>}/>
+        
         </Routes>
           
         <Footter/>

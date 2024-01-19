@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import "./Login.css";
 import { Link } from 'react-router-dom';
+import axios from "axios"
 function Login() {
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     password: ""
   });
 
@@ -22,7 +23,14 @@ function Login() {
     console.log("You submitted the form", formData);
  
 
-    console.log(formData);
+    axios.post('http://localhost:8000/login', formData)
+    .then((response) => {
+      if (response.data.status=== 200){
+        console.log(response.data.token)
+        localStorage.setItem("token", response.data.token);}
+        
+      console.log('Response from server:', response.data.massage)
+    })
   }
 
   return (
@@ -44,9 +52,9 @@ function Login() {
         <div className="login"> 
           <input 
             type='text' 
-            name="name" 
+            name="username" 
             id='username' 
-            value={formData.name} 
+            value={formData.username} 
             required 
             onChange={handleChange} 
             />

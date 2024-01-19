@@ -35,10 +35,10 @@ function Header() {
               <NavDropdown.Item as={Link} to="/Searchjob"style={{height:"35px",width:"10px", padding:"3px" ,textAlign:"center", marginLeft:"30px",marginBottom:"20px"}} >Searchjob</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="/about"className='navlink'>Find job</Nav.Link>
+            <Nav.Link as={Link} to="/FindJob"className='navlink'>Find job</Nav.Link>
             
             
-            <Nav.Link as={Link} to="/Employers"className='navlink' style={{background:"#bbe4e9", borderRadius:"50px",height:"50px", marginTop:"12px" , width:"120px" , textAlign:"center", padding:"0px"}}>Employer</Nav.Link>
+            <Nav.Link as={Link} to="/Employers"className='navlink' style={{background:"red", borderRadius:"50px",height:"50px", marginTop:"12px" , width:"120px" , textAlign:"center", padding:"0px"}}>Employer</Nav.Link>
             
           </Nav>
         </Navbar.Collapse>

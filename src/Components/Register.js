@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
 import "./Register.css"
+import axios from "axios"
 function Register() {
   const [formData,setFormData] =useState({
     username :"",email:"",number:"" ,password:""
@@ -15,8 +16,16 @@ function Register() {
    const handleSubmit =(e)=>{
     e.preventDefault()
     console.log("your submitted the form" ,formData)
-    console.log(formData)
+    // console.log(formData)
+    // console.log("hello")
+    
+    axios.post('http://localhost:8000/register', formData)
+    .then((response) => {
+      console.log('Response from server:', response.data.massage)
+    })
+    
    }
+   localStorage.setItem("name","ujwal")
   
   
   
