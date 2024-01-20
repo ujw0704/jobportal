@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./ApplyJobs.css"
+import axios from "axios"
 function ApplyJobs() {
   const [applyFormData, setApplyFormData] = useState({
     name: '',
@@ -20,14 +21,22 @@ function ApplyJobs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
+   axios.post("http://localhost:8000/applyJobs",applyFormData)
+   .then(response => {
+    console.log(response.data);
     console.log('Application Submitted:', applyFormData);
+  
+ })
+ .catch(error => {
+   console.error('Error job data:', error);
+ });
+   
    
     setApplyFormData({
       name: '',
       email: '',
       phoneNumber: '',
-    //   resume: '',
+      resume: '',
       coverLetter: '',
       experienceLevel: '',
     });

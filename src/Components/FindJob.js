@@ -1,23 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "./FindJobs.css"
 import {  useNavigate } from 'react-router-dom'
+import { useContext } from 'react';
+import { context } from '../App';
+
+
+
+
+
 function FindJob() {
   const [findJob, setFindJob] = useState([]);
+  const {id, setId} = useContext(context)
+
   const navigate = useNavigate()
   const apply = useNavigate()
+
   useEffect(() => {
     axios.get(`http://localhost:8000/get-jobs`)
       .then((response) => {
-        console.log('Success!', response.data);
+        console.log('Success!', response.data.data);
         setFindJob(response.data.data);
       })
       .catch((error) => {
         console.error('Error fetching job data:', error);
       });
   }, []);
-  function handleClick(e){
+  function handleClick(e,jobid){
     e.preventDefault()
-    navigate("/Single-Jobs/:jobId")
+    // console.log(id)
+    setId(jobid)
+     navigate("/Single-Jobs")
   }
   function handleApplyClick(e){
     e.preventDefault()
@@ -25,11 +38,11 @@ function FindJob() {
   }
 
   return (
-    <div>
+    <div className='FindJobs'>
       {
         findJob.map((job, index) => {
           return (
-            <div key={index}>
+            <div className="jobCat"key={index}>
               <h2>Company: {job.company}</h2>
               <p>CreatedAt: {job.createdAt}</p>
               <p>Number: {job.number}</p>
@@ -38,9 +51,9 @@ function FindJob() {
               <p>UpdatedAt: {job.updatedAt}</p>
               <p>WorkLocation: {job.workLocation}</p>
               <p>WorkType: {job.worktype}</p>
-             <button onClick={handleClick}>view</button>
+             <button  className="veiwButton"onClick={(e)=>handleClick(e,job._id)}>view</button>
               <br /><br />
-             <button onClick={handleApplyClick}>Apply</button>
+             <button className='Applybutton' onClick={handleApplyClick}>Apply</button>
             </div>
           );
         })

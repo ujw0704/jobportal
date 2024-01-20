@@ -1,0 +1,60 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.FindJobs{
+    display: flex;
+    font-size:10px ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+     /* flex-direction: ;  */
+     font-style: italic;
+     height: 100%;
+     width: 100%;
+     
+    }
+    .jobCat{
+        position: relative;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius:10px ;
+    height: 300px;
+    width: 700px;
+  align-self: center;
+  justify-content: center;
+  margin: 20px;
+ 
+
+}
+.jobCat h2{
+    margin-left: 200px;
+}
+.jobCat p{
+    margin-left: 200px;
+}
+.veiwButton{
+    position: absolute;
+    top: 86%;
+    left: 16%;
+    background: red;
+    color: black;
+    width: 66px!important;
+    margin-left: 200px;
+    border-radius: 5px;
+    box-shadow: 5px 2px 5px;
+}
+.Applybutton{
+    position: absolute;
+    top: 86%;
+    left: 30%;
+    width: 80px!important;
+    box-shadow: 5px 2px 5px black!important;
+    border-radius: 5px;
+   
+  
+
+  
+}

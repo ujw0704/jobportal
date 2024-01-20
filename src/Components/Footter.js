@@ -7,10 +7,12 @@ function Footter() {
      
 <ul>
 
-      
+
+
       <li>
             <Link to="/about">About-Us</Link>
           </li>
+   
     
           <li>
             <Link to="/contact">Contact-Us</Link>

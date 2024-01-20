@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import React, { createContext} from "react";
+import React, { createContext, useState} from "react";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import About from "./Components/About";
@@ -29,10 +29,12 @@ import ApplyJobs from "./Components/ApplyJobs";
   export const context = createContext({})
 
 function App() {
+  const[id ,setId] = useState()
   
   return (
     <div className="App">
-    <context.Provider value={{}}>
+      
+    <context.Provider value={{id,setId}}>
 
         <BrowserRouter>
         <Header />
@@ -49,7 +51,7 @@ function App() {
         <Route path ="/EmployerLogin" element={<EmployerLogin/>}/>
         <Route path="/companyInquire" element={<companyInquire/>}/>
         <Route path="/FindJob" element={<FindJob/>}/>
-        <Route path="/Single-Jobs/:jobId" element={<SingleJobs/>}/>
+        <Route path="/Single-Jobs" element={<SingleJobs/>}/>
         <Route path="/ApplyJobs" element={<ApplyJobs/>}/>
         
         </Routes>

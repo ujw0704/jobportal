@@ -1,7 +1,7 @@
 import React from 'react'
  import "./Employer.css"
  
-import {  useNavigate ,Link} from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 function Employer() {
   const navigate = useNavigate();
 
@@ -22,18 +22,47 @@ function Employer() {
          
 
      <button onClick={handleClick} className="employer-button">Start hiring</button>
-      <li>
-     {/* <Link to="/Post">jobpost!</Link>  */}
+     
+        </div>
+      </div>
+      <div className='imagesCont'>
 
-      </li>
 
+      <div className='images_logo'>
+        <img src='https://www.kyodaiacademy.com/assets/img/icon/care.png'alt=''></img>
+        <h6>Nursing Career/CareGaving</h6>
+      </div>
+      <div className='images_logo'>
+
+        <img src='https://www.kyodaiacademy.com/assets/img/icon/agr.png'alt=''></img>
+        <h6>Agriculture</h6>
+      </div>
+      <div className='images_logo'>
+
+        <img src='https://www.kyodaiacademy.com/assets/img/icon/acco.png'alt=''></img>
+        <h6>Accomodation Industry</h6>
+      </div>
+      <div className='images_logo'>
+
+        <img src='https://www.kyodaiacademy.com/assets/img/icon/fcood.png'alt=''></img>
+        <h6>Food Services Industry & more</h6>
+      </div>
+      <div  className='images_logo'>
+
+        <img src='https://www.kyodaiacademy.com/assets/img/icon/desktop.png'alt=''></img>
+        <h6>It Profession</h6>
+      </div>
+
+      </div>
+
+         
+
+
+      </div>
     
 
-        </div>
       
    
-      </div>
-      </div>
         
             
            
