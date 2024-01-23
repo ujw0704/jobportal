@@ -12,6 +12,8 @@ import { context } from '../App';
 function FindJob() {
   const [findJob, setFindJob] = useState([]);
   const {id, setId} = useContext(context)
+  const [search, setSearch]= useState("")
+  const[ searchFilter, setFilter]= useState([])
 
   const navigate = useNavigate()
   const apply = useNavigate()
@@ -21,6 +23,7 @@ function FindJob() {
       .then((response) => {
         console.log('Success!', response.data.data);
         setFindJob(response.data.data);
+        setFilter(response.data.data)
       })
       .catch((error) => {
         console.error('Error fetching job data:', error);
@@ -36,13 +39,39 @@ function FindJob() {
     e.preventDefault()
      apply("/ApplyJobs")
   }
-
+  useEffect(() => {
+    console.log('Search:', search);
+    console.log('Search Filter:', searchFilter);
+  
+    const result = searchFilter.filter((resp) => 
+      (resp.title?.toLowerCase().includes(search.toLowerCase()) || false) ||
+      (resp.company?.toLowerCase().includes(search.toLowerCase()) || false)
+    );
+  
+    console.log('Filter Result:', result);
+  
+    setFindJob(result);
+  }, [search]);
+  
   return (
+    
+    <>
+    <div>
+<input
+  type="text"
+  id="search"
+  placeholder="search jobs"
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
+  {/* <button onClick={HandleSubmit}>submit</button> */}
+  </div>
     <div className='FindJobs'>
-      {
-        findJob.map((job, index) => {
-          return (
-            <div className="jobCat"key={index}>
+
+     {
+       findJob.map((job, index) => {
+         return (
+           <div className="jobCat"key={index}>
               <h2>Company: {job.company}</h2>
               <p>CreatedAt: {job.createdAt}</p>
               <p>Number: {job.number}</p>
@@ -57,8 +86,9 @@ function FindJob() {
             </div>
           );
         })
-    }
+      }
     </div>
+  </>
   );
 }
 
