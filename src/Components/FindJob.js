@@ -4,7 +4,7 @@ import "./FindJobs.css"
 import {  useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { context } from '../App';
-
+import SearchIcon from '@mui/icons-material/Search';
 
 
 
@@ -12,7 +12,7 @@ import { context } from '../App';
 function FindJob() {
   const [findJob, setFindJob] = useState([]);
   const {id, setId} = useContext(context)
-  const [search, setSearch]= useState("")
+  const {search,setSearch} = useContext(context)
   const[ searchFilter, setFilter]= useState([])
 
   const navigate = useNavigate()
@@ -56,15 +56,18 @@ function FindJob() {
   return (
     
     <>
-    <div>
-<input
+    <div className='seachbar'>
+<input 
   type="text"
   id="search"
   placeholder="search jobs"
+  
   value={search}
   onChange={(e) => setSearch(e.target.value)}
 />
+<SearchIcon className='searchicons'/>
   {/* <button onClick={HandleSubmit}>submit</button> */}
+
   </div>
     <div className='FindJobs'>
 

@@ -54,3 +54,15 @@ textarea{
 
 
 }
+@media screen and (max-width: 768px) {
+    .applyJobs {
+        margin-top: 7%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .jobSelcet {
+        margin-bottom: 10px;
+    }
+}

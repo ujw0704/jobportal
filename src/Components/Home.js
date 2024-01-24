@@ -186,11 +186,11 @@ function Home() {
             Need Help? Contact Us!
             <ul>
                 <li>
-                    <Link to ="/contact">contact</Link><br></br>
+                    <Link to ="/contact"className ="helpus">contact</Link><br></br>
                 </li>
                
                 <li>
-                    <Link to ="/contact">Company Inquire</Link>
+                    <Link to ="/contact"className="helpus">Company Inquire</Link>
                 </li>
             </ul>
 

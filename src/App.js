@@ -30,11 +30,11 @@ import ApplyJobs from "./Components/ApplyJobs";
 
 function App() {
   const[id ,setId] = useState()
-  
+  const [search, setSearch]= useState("")
   return (
     <div className="App">
       
-    <context.Provider value={{id,setId}}>
+    <context.Provider value={{id,setId,search,setSearch}}>
 
         <BrowserRouter>
         <Header />

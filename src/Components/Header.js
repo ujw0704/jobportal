@@ -4,10 +4,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar,NavDropdown} from 'react-bootstrap';
  import 'bootstrap/dist/css/bootstrap.min.css';
-
+//  import { useContext } from 'react';
+//  import { context } from '../App'
 import "./Header.css";
 
 function Header() {
+  // const {search,setSearch} = useContext(context)
+
+
+  // const handleSearchChange = (e) => {
+  //   setSearch(e.target.value);
+  // };
+
   return (
     <div className='Header'>
       <Navbar bg="light" expand="lg">
@@ -16,7 +24,16 @@ function Header() {
           
           <span className='logo'>Career</span>
         </Navbar.Brand>
-
+        {/* <div style={{ height: "10px", width: "20px" }}>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search jobs"
+            value={search}
+            onChange={handleSearchChange}
+          />
+        </div> */}
+      
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='navlink'/>
 
         <Navbar.Collapse id="basic-navbar-nav"className='navlink'>
@@ -43,6 +60,13 @@ function Header() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+
+
+
+
+
+      
     </div>
   );
 }

@@ -1,60 +1,114 @@
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
-}
 
-.FindJobs{
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f4f4f4; */
+  }
+  
+  .seachbar {
     display: flex;
-    font-size:10px ;
     justify-content: center;
     align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  #search {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .searchicons {
+    cursor: pointer;
+  }
+  
+  .FindJobs {
+    display: flex;
     flex-wrap: wrap;
-     /* flex-direction: ;  */
-     font-style: italic;
-     height: 100%;
-     width: 100%;
-     
-    }
-    .jobCat{
-        position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .jobCat {
+    position: relative;
     border: 2px solid black;
     font-weight: bold;
-    border-radius:10px ;
-    height: 300px;
-    width: 700px;
-  align-self: center;
-  justify-content: center;
-  margin: 20px;
- 
-
-}
-.jobCat h2{
-    margin-left: 200px;
-}
-.jobCat p{
-    margin-left: 200px;
-}
-.veiwButton{
+    border-radius: 10px;
+    height: 360px;
+    width: 70%;
+    max-width: 700px;
+    margin: 20px;
+  }
+  
+  .jobCat h2,
+  .jobCat p {
+    margin-left: 80px;
+  }
+  
+  .veiwButton,
+  .Applybutton {
     position: absolute;
-    top: 86%;
-    left: 16%;
-    background: red;
-    color: black;
-    width: 66px!important;
-    margin-left: 200px;
+    top: 90%;
+    width: 80px;
     border-radius: 5px;
     box-shadow: 5px 2px 5px;
-}
-.Applybutton{
-    position: absolute;
-    top: 86%;
-    left: 30%;
-    width: 80px!important;
-    box-shadow: 5px 2px 5px black!important;
-    border-radius: 5px;
-   
+  }
   
-
+  .veiwButton {
+    left: 35%;
+    background: red;
+    color: black;
+  }
   
-}
+  .Applybutton {
+    left: 60%;
+  }
+  
+  /* Media Queries */
+  
+  @media only screen and (max-width: 768px) {
+    .jobCat {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .seachbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #search {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .searchicons {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .veiwButton{
+        
+    }
+    .Applybutton {
+      position: absolute;
+      width: 20%;
+      /* margin-top: 10px; */
+      margin-bottom: 20px;
+      margin: 5px;
+    }
+  }
+  

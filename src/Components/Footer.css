@@ -18,9 +18,18 @@
 }
 a{
     text-decoration: none;
-    color: rgb(13, 79, 136)!important;
+    /* color: white ; */
 }
 li{
     list-style:none;
     color: rgb(25, 165, 67);
+}
+
+@media only screen and (max-width: 768px) {
+    .footer ul li a{
+        font-size: 1em!important;
+        }
+       
+
+
 }

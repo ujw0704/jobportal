@@ -31,7 +31,8 @@ return(
      </div>
 
     </form>
-    
+      <div className="iframe">
+
     
     <iframe
           title="Google Map"
@@ -42,7 +43,8 @@ return(
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          ></iframe>
+          </div>
 
 
 
