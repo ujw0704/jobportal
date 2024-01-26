@@ -58,7 +58,7 @@ function Login() {
             required 
             onChange={handleChange} 
             />
-          <label htmlFor="username" >Username</label>
+          <label  className='loginlabel' htmlFor="username" >Username</label>
         </div>
         <div className="login"> 
           <input 
@@ -69,7 +69,7 @@ function Login() {
             required 
             onChange={handleChange} 
             />
-          <label htmlFor='password' >Password</label> 
+          <label className='loginlabel' htmlFor='password' >Password</label> 
           <span 
             className="password-toggle" 
             onClick={togglePasswordVisibility}

@@ -39,7 +39,7 @@ function Register() {
               <div className='register'>
   
             <input type='text' name='username' placeholder='enter your username' value={formData.username} required onChange={handleChange}/>
-            <label htmlFor="Username">Username</label>
+            <label  className="labelregister"htmlFor="Username">Username</label>
               </div>
                
             <div  className='register'> 
@@ -63,7 +63,7 @@ function Register() {
            <label htmlFor='password'>passsword</label>
            </div>
             </div>
-            <button  type='submit'>submit</button>
+            <button  className='registerbutton' type= 'submit'>submit</button>
           </form>
       </div>
     )

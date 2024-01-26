@@ -69,8 +69,8 @@ body{
 .input-container label {
     position: absolute;
        /* bottom:20%;   */
-    /* left: 20px; */
-    right: 350px;
+    left: -100px;
+    /* right: 350px; */
     /* bottom: 20px; */
 
     transform: translateY(-50%) translateX(0.625rem);
@@ -186,3 +186,36 @@ button:hover {
         opacity: .6;
         }
 
+        @media screen and (max-width: 767px){
+
+            button{
+                width: 250px;
+                border-radius: 15px; 
+                /* margin-left: 59px; */
+                }
+                 .login input {
+                    padding-left:0px ;
+                    padding-right: 0px;
+                    width: 250px;
+                    margin-bottom: 30px;
+                    margin-left: 29px;
+                }
+            
+                .loginlabel{
+                    left: 55px!important;
+                }
+               .login-header{
+                margin-left: 88px;
+               }
+               .password-toggle{
+                left:250px;
+                bottom:20px;
+               }
+               .register{
+                left: 31px;
+               }
+               
+
+            }
+                 
+    
