@@ -197,10 +197,10 @@ function Home() {
         </h2>
       </div>
     </div>
-    </div>
               
         
            
+    </div>
 
         <div  className=' images-flex'>
           

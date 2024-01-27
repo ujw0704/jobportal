@@ -57,7 +57,7 @@
     left: 20px;
 }
 
-/* Media Query for smaller screens */
+
 @media only screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;
