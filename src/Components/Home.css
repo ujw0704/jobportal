@@ -70,7 +70,7 @@
 
  .social-icons{
     position: absolute;
-    top:950px;
+    top:930px;
     left: 260px;
     transform: translateX(-50%);
       z-index:1;  
@@ -203,20 +203,20 @@
   .video-overlay h1 {
     
     margin-bottom: 10px;
-    color: #bc2e3c;
+    color:snow;
   }
   
   .video-overlay strong {
     /* font-size: 1.5em; */
     display: inline-block;
     margin-bottom: 10px;
-    color:red
+    color:snow;
   }
   
   .video-overlay span {
     display: block;
     margin-bottom: 10px;
-    color:red
+    color:snow
 
     
   }
@@ -233,7 +233,7 @@
     /* font-size: 2.5em; */
     max-width: 600px;
     margin: 0 auto;
-    color:red
+    color:snow
 
   }
   
@@ -525,12 +525,27 @@ h4{
 }
   
 }.helpbox{
-    margin-bottom: 520px;
+    margin-bottom: 450px;
     margin-right:100px ;
-/* }.social-icons p{
-    margin-top:670% ;
-    margin-left:50% ;
+    font-size: 12px;
+   
+}.helpbox  a{
+    font-size: 10px;
   
+}
+.social-icons p{
+    /* margin-top: 768px; */
+   padding-bottom: 30px;
+    margin-left:50% ;
+    font-size:12px ;
+  
+}.findjob h1{
+    padding-bottom:3px ;
+    font-size: 0px;
+
+/* }.icons p{
+    margin: 10px;
+    font-size: 10px;
 } */
 }
 
