@@ -1,9 +1,9 @@
 import React, {useEffect, useState}from 'react'
 import axios from "axios"
-// import { useParams } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { useContext } from 'react';
 import { context } from '../App';
-
+ import "./Singlejobs.css"
 
 function SingleJobs() {
 
@@ -43,7 +43,7 @@ function SingleJobs() {
 
 //  }
   return (
-    <div>
+    <div className='singlejobs'>
       {
         <>
        
@@ -54,6 +54,9 @@ function SingleJobs() {
         <h2>WorkType:{SingleJobs.worktype}</h2>
          <h2>CreatedAt:{SingleJobs.createdAt}</h2>
          <h2>updateAt:{SingleJobs.updatedAt}</h2>
+         <Link to="/ApplyJobs">
+            <button>Apply Jobs</button>
+          </Link>
         </>
 
 

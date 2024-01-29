@@ -70,7 +70,7 @@
 
  .social-icons{
     position: absolute;
-    top:900px;
+    top:920px;
     left: 250px;
     transform: translateX(-50%);
       z-index:1;  
@@ -531,11 +531,12 @@ h4{
    
 }.helpbox  a{
     font-size: 10px;
+    
   
 }
 .social-icons p{
     /* margin-top: 768px; */
-   padding-bottom: 30px;
+   padding-bottom: 20px;
     margin-left:50% ;
     font-size:12px ;
   
