@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import "./Login.css";
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import axios from "axios"
+import { useContext } from 'react';
+import { context } from '../App';
+
+
 function Login() {
   const [formData, setFormData] = useState({
     username: "",
     password: ""
   });
+   const {setisLogged} =useContext(context)
+
+
+  const navigate =useNavigate()
+
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -28,6 +37,10 @@ function Login() {
       if (response.data.status=== 200){
         console.log(response.data.token)
         localStorage.setItem("token", response.data.token);}
+        formData.username = ""
+        formData.password =""
+        setisLogged(true)
+        navigate("/")
         
       console.log('Response from server:', response.data.massage)
     })

@@ -47,15 +47,15 @@ function SingleJobs() {
       {
         <>
        
-        <h2>CompamyName:{SingleJobs.company}</h2>
-        <h2> email:{SingleJobs.email}</h2>
-        <h2> Position:{SingleJobs.position}</h2>
-        <h2>PhoneNumber:{SingleJobs.number}</h2>
-        <h2>WorkType:{SingleJobs.worktype}</h2>
-         <h2>CreatedAt:{SingleJobs.createdAt}</h2>
-         <h2>updateAt:{SingleJobs.updatedAt}</h2>
+        <h2 className='singledata'>CompamyName:{SingleJobs.company}</h2>
+        <p className='singledata'> email:{SingleJobs.email}</p>
+        <p className='singledata'> Position:{SingleJobs.position}</p>
+        <p className='singledata'>PhoneNumber:{SingleJobs.number}</p>
+        <p className='singledata'>WorkType:{SingleJobs.worktype}</p>
+         <p className='singledata'>CreatedAt:{SingleJobs.createdAt}</p>
+         <p className='singledata'>updateAt:{SingleJobs.updatedAt}</p>
          <Link to="/ApplyJobs">
-            <button>Apply Jobs</button>
+            <button style={{width:"120px",marginBottom:"30px"}}>Apply Jobs</button>
           </Link>
         </>
 

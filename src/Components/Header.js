@@ -1,71 +1,165 @@
 
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav, Navbar,NavDropdown} from 'react-bootstrap';
- import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import { Link } from 'react-router-dom';
+// import { Nav, Navbar,NavDropdown} from 'react-bootstrap';
+//  import 'bootstrap/dist/css/bootstrap.min.css';
 //  import { useContext } from 'react';
 //  import { context } from '../App'
-import "./Header.css";
+// import "./Header.css";
+
+// function Header() {
+//   const {search,setSearch,searchFilter,setFilter} = useContext(context)
+    
+   
+
+//   const handleSearchChange = (e) => {
+//     setSearch(e.target.value);
+//   };
+ 
+//   return (
+    
+  
+// <div className='headerContainer'>
+  
+     
+
+//       <span>
+
+//         kyodai Carrer
+//       </span>
+      
+     
+//      <div>
+//       <input type='text' placeholder='SEARCH'></input>
+//      </div>
+//      <div className='homeLink'>
+//       <ul>
+//         <li>
+//           <Link to= "/">Home</Link>
+//         </li>
+//         <li>
+        
+//         <Link to ="/Login">Login</Link>
+//       </li>
+//         <li>
+//           <Link to="/Findjob">Findjob</Link>
+//         </li>
+//         <li>
+        
+//           <Link to ="/Employers">Employer</Link>
+//         </li>
+
+          
+//       </ul>
+//      </div>
+    
+  
+
+
+
+      
+  
+//  </div>
+//   );
+// }
+
+// export default Header;
+// Header.js
+import axios from "axios"
+import React, {  useState,useEffect } from 'react';
+import { Link ,useNavigate} from 'react-router-dom';
+import { useContext } from 'react';
+import { context } from '../App';
+// import SearchIcon from '@mui/icons-material/Search';
+import './Header.css';
 
 function Header() {
-  // const {search,setSearch} = useContext(context)
+  const { search, setSearch, searchFilter, setFilter ,isLogged, setisLogged} = useContext(context);
+ 
+
+ const navigate = useNavigate()
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+      
+     navigate("/FindJob")
+  };
+    
+  
+//  if(localStorage.getItem("token")){
+//   setisLogged(true)
+ 
+//  }else{
+//   setisLogged(false)
+//  }
+
+  
 
 
-  // const handleSearchChange = (e) => {
-  //   setSearch(e.target.value);
-  // };
+
+  useEffect(() => {
+    if(!search){
+      console.log("searching");
+    }else
+    
+    axios.get(`http://localhost:8000/get-jobs`)
+      .then((response) => {
+        console.log('Success!', response.data.data);
+        setFilter(response.data.data); 
+      })
+      .catch((error) => {
+        console.error('Error fetching job data:', error);
+      });
+  }, [search]);
+  
+  //
+
+ 
+
+
+  function handlelogout(e){
+    e.preventDefault()
+    localStorage.removeItem("token")
+    setisLogged(false)
+    navigate("/")
+    // alert(" sucsseful loggin out")
+    
+  }
+
+
+  
 
   return (
-    <div className='Header'>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand className='logohead'>
-          <span className='logo'>kyodai</span>
-          
-          <span className='logo'>Career</span>
-        </Navbar.Brand>
-        {/* <div style={{ height: "10px", width: "20px" }}>
-          <input
-            type="text"
-            id="search"
-            placeholder="Search jobs"
-            value={search}
-            onChange={handleSearchChange}
-          />
-        </div> */}
-      
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='navlink'/>
+    <div className='headerContainer'>
+      <span>kyodai Carrer</span>
+       <div>
+        <input
+          type='text'
+          placeholder='SEARCH'
+          value={search}
+          onChange={handleSearchChange}
+        />
+      </div> 
+      <div className='homeLink'>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            {
+      (isLogged)?<button onClick={handlelogout}>logout</button>:<Link to="/Login">Login</Link>
 
-        <Navbar.Collapse id="basic-navbar-nav"className='navlink'>
-          <Nav  className='navs' >
+            }
+          </li>
+          <li>
+            <Link to="/Findjob">Findjob</Link>
+          </li>
+          <li>
+            <Link to="/Employers">Employer</Link>
             
-            <Nav.Link as={Link} to="/"className='navlink'>Home</Nav.Link>
-            <Nav.Link as={Link} to="/Login"className='navlink'>Login</Nav.Link>
-           
-
-            
-            <NavDropdown title={<span className="custom-dropdown-title">Search</span>} id="basic-nav-dropdown" >
-              <NavDropdown.Item as={Link} to="/Searchjob" style={{height:"35px",width:"20px",padding:"3px",marginLeft:"30px",marginBottom:"20px"}}>Searchjob</NavDropdown.Item>
-             <NavDropdown.Divider />
-             <NavDropdown.Item as={Link} to="/Searchjob" style={{height:"35px",width:"20px",padding:"3px",marginLeft:"30px",marginBottom:"20px"}}>Searchjob</NavDropdown.Item>
-             <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/Searchjob"style={{height:"35px",width:"10px", padding:"3px" ,textAlign:"center", marginLeft:"30px",marginBottom:"20px"}} >Searchjob</NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link as={Link} to="/FindJob"className='navlink'>Find job</Nav.Link>
-            
-            
-            <Nav.Link as={Link} to="/Employers"className='navlink' style={{background:"red", borderRadius:"50px",height:"50px", marginTop:"12px" , width:"120px" , textAlign:"center", padding:"0px"}}>Employer</Nav.Link>
-            
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-
-
-
-
-
-
+          </li>
+        </ul>
+      </div>
       
     </div>
   );

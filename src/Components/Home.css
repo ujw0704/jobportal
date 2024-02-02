@@ -436,7 +436,7 @@ h4{
     width: 120px!important;
     height: 25px;
     border-radius: 10px;
-    /* margin-top: 100px; */
+    margin-top: -6px;
 }
   
   
@@ -494,6 +494,7 @@ h4{
 .bestjob {
   text-align: center;
   font-size: 18px; 
+  marginLeft:472px
 }
 
 
@@ -505,10 +506,12 @@ h4{
     /* margin: 10px!important; */
 }
 
-
+ /* .bestjob{
+    margin-left: 472px;
+ } */
 
   .bestjob {
-    margin-left: 0; 
+    margin-left: 86px; 
   }
    h4{
     font-size: 22px;
@@ -525,7 +528,7 @@ h4{
 }
   
 }.helpbox{
-    margin-bottom: 450px;
+    margin-bottom: 400px;
     margin-right:100px ;
     font-size: 12px;
    
@@ -534,21 +537,29 @@ h4{
     
   
 }
+.helpbox h2{
+    font-size: 10px;
+}
 .social-icons p{
-    /* margin-top: 768px; */
+    margin-top: -4%;
    padding-bottom: 20px;
-    margin-left:50% ;
+    margin-left:33% ;
     font-size:12px ;
   
 }.findjob h1{
     padding-bottom:3px ;
     font-size: 0px;
-
+    margin-bottom:23px ;
+}
 /* }.icons p{
     margin: 10px;
     font-size: 10px;
+
 } */
+/* .bestjobs{
+  margin-left:   107px;
 }
+} */
 
 
 

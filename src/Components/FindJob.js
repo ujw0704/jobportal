@@ -16,7 +16,7 @@ function FindJob() {
   const[ searchFilter, setFilter]= useState([])
 
   const navigate = useNavigate()
-  const apply = useNavigate()
+  
 
   useEffect(() => {
     axios.get(`http://localhost:8000/get-jobs`)
@@ -37,7 +37,14 @@ function FindJob() {
   }
   function handleApplyClick(e){
     e.preventDefault()
-     apply("/ApplyJobs")
+    if(localStorage.getItem("token")){
+      navigate("/ApplyJobs")
+      
+    }else{
+      alert("login please!!")
+      navigate("/login")
+    }
+   
   }
   useEffect(() => {
     console.log('Search:', search);

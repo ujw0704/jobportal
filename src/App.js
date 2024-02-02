@@ -31,10 +31,12 @@ import ApplyJobs from "./Components/ApplyJobs";
 function App() {
   const[id ,setId] = useState()
   const [search, setSearch]= useState("")
+  const [ isLogged, setisLogged] = useState(false)
+
   return (
     <div className="App">
       
-    <context.Provider value={{id,setId,search,setSearch}}>
+    <context.Provider value={{id,setId,search,setSearch,isLogged, setisLogged }}>
 
         <BrowserRouter>
         <Header />

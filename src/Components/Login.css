@@ -10,7 +10,7 @@ body{
     /* width: 100%; */
      /* background-color: #283fbd;  */
     /* margin-left:50px ; */
-    color: #242328;
+    /* color: #242328; */
    
     
     
@@ -111,7 +111,7 @@ body{
     color: rgb(205, 224, 218); 
     background-color: #1e1f1f;
 }
-h2{
+.login-header{
     /* margin: 20px; */
     font-family: "italic";
     color:#31846f;
