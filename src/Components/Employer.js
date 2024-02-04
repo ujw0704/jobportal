@@ -7,8 +7,11 @@ function Employer() {
 
   const handleClick=(e)=>{
     e.preventDefault()
+    if(localStorage.getItem("token")){
+      
     navigate("/EmployerLogin")
-    
+    } 
+    else{navigate('/')}
   }
   return (
  

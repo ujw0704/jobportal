@@ -209,7 +209,7 @@ function Home() {
            <img src={images6} alt='flex'/>
            
         </div>
-        <p className='bestjob' style={{ marginLeft:"472px", marginBottom:"33px" }}>NoN-Technical Skill</p>
+        <p className='bestjob' style={{ marginLeft:"473px",width:"180px", marginBottom:"33px" }}>NoN-Technical Skill</p>
         <div className='images-flex'>
         <img src={images10} alt='flex'/>
            <img src={images8} alt='flex'/>

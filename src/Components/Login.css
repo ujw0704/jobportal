@@ -160,7 +160,7 @@ button:hover {
 
 .password-toggle{
     position: absolute;
-    top: 207px;
+    top: 203px;
     right: -77px;
     width: 20px;
     height: 20px;
@@ -180,10 +180,13 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-   color: #1a27bc;
+   color: #1a27bc!important;
     clear: both;
     }.submit:disabled{
         opacity: .6;
+        }
+        .register a{
+            color: #1a27bc!important;
         }
 
         @media screen and (max-width: 767px){
@@ -205,11 +208,12 @@ button:hover {
                     left: 55px!important;
                 }
                .login-header{
-                margin-left: 88px;
+                margin-left: 41px;
+                margin-bottom: 20px;
                }
                .password-toggle{
                 left:250px;
-                bottom:20px;
+                 top:211px;
                }
                .register{
                 left: 31px;

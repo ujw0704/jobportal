@@ -28,7 +28,13 @@ function Login() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
+     if (formData.password.length < 6) {
+      alert("Password should have at least six characters");
+     
+      return;
+    }
+
     console.log("You submitted the form", formData);
  
 

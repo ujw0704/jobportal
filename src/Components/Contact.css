@@ -17,6 +17,7 @@
 .formContact h1 {
   text-align: center;
   margin-top: 25px;
+  color:green;
 }
 
 .formContact label {
@@ -24,7 +25,9 @@
   margin-bottom: 8px;
 }
 
-.formContact input,
+/* .formContact input{
+  margin-left:163px ;
+} */
 .formContact textarea {
   width: auto;
   padding: 8px;
@@ -58,13 +61,13 @@
 
 @media screen and (max-width: 768px) {
   .contact {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
   }
 
   .formContact {
     margin-right: 0;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .iframe {
@@ -72,4 +75,5 @@
     margin-right: 0;
     /* margin-bottom: 20px; */
   }
+  
 }

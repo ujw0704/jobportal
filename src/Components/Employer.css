@@ -118,7 +118,9 @@
     }
 
     .employer-button {
-        margin-top: 20px;
+        margin-top: -7px;
+        width:  100%;
+        margin-left: 20px;
     }
 
     .images_logo {

@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import "./ApplyJobs.css"
 import axios from "axios";
+import {  useNavigate } from 'react-router-dom'
+
 
 function ApplyJobs() {
   const [applyFormData, setApplyFormData] = useState({
@@ -12,6 +14,9 @@ function ApplyJobs() {
     coverLetter: '',
     experienceLevel: '', 
   });
+
+
+  const navigate = useNavigate()
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -31,6 +36,11 @@ function ApplyJobs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!localStorage.getItem("token")) {
+      alert("Please log in to apply for jobs!");
+      navigate("/login");
+    
+    }
     const formData = new FormData();
     formData.append('name', applyFormData.name);
     formData.append('email', applyFormData.email);
