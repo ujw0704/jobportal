@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import './Header.css';
 
 function Header() {
-  const { search, setSearch, searchFilter, setFilter, isLogged, setisLogged } = useContext(context);
+  const { search, setSearch, isLogged, setisLogged } = useContext(context);
 
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
@@ -20,20 +20,19 @@ function Header() {
     navigate("/FindJob");
   };
 
-  useEffect(() => {
-    if (!search) {
-      console.log("searching");
-    } else {
-      axios.get(`http://localhost:8000/get-jobs`)
-        .then((response) => {
-          console.log('Success!', response.data.data);
-          setFilter(response.data.data);
-        })
-        .catch((error) => {
-          console.error('Error fetching job data:', error);
-        });
-    }
-  }, [search]);
+  
+  
+       
+      // axios.get(`http://localhost:8000/get-jobs`)
+      //   .then((response) => {
+      //     console.log('Success!', response.data.data);
+         
+      //   })
+      //   .catch((error) => {
+      //     console.error('Error fetching job data:', error);
+      //   });
+    
+
 
   function handlelogout(e) {
     e.preventDefault();
@@ -52,7 +51,7 @@ function Header() {
         <div className="search">
           <input
             type='text'
-            placeholder='SEARCH'
+            placeholder='SEARCH JOBS'
             value={search}
             onChange={handleSearchChange}
           />
@@ -72,6 +71,8 @@ function Header() {
             <li>
               <Link to="/Employers">Employer</Link>
             </li>
+
+          
           </ul>
         </div>
       </div>

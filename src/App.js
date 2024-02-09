@@ -11,7 +11,7 @@ import Home from "./Components/Home";
 import Searchjob from "./Components/Searchjob"
 import Footter from "./Components/Footter";
 import WindowScroll from "./Components/WindowScroll";
-// import Helpcenter from "./Components/Helpcenter";
+import AdvanceSearch from "./Components/AdvanceSearch";
 import Employers from "./Components/Employer";
 import EmployerLogin from "./Components/EmployerLogin";
 // import Post from "./Components/Post";
@@ -20,10 +20,7 @@ import FindJob from "./Components/FindJob";
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import SingleJobs from "./Components/SingleJobs";
 import ApplyJobs from "./Components/ApplyJobs";
-// import { HelpCenter } from "@mui/icons-material";
-// import companyInquire from "./Components/companyInquire";
-
-
+import Searchview from "./Components/Searchview";
 
 
   export const context = createContext({})
@@ -32,11 +29,14 @@ function App() {
   const[id ,setId] = useState()
   const [search, setSearch]= useState("")
   const [ isLogged, setisLogged] = useState(false)
-
+  const [findJob, setFindJob] = useState([]);
+  const[searchResults, setSearchResults]=useState([])
+  const [ singleJobs , setSingleJobs] = useState({})
+  
   return (
     <div className="App">
       
-    <context.Provider value={{id,setId,search,setSearch,isLogged, setisLogged }}>
+    <context.Provider value={{id,setId,search,setSearch,isLogged, setisLogged ,findJob, setFindJob,searchResults, setSearchResults,singleJobs , setSingleJobs}}>
 
         <BrowserRouter>
         <Header />
@@ -55,6 +55,9 @@ function App() {
         <Route path="/FindJob" element={<FindJob/>}/>
         <Route path="/Single-Jobs" element={<SingleJobs/>}/>
         <Route path="/ApplyJobs" element={<ApplyJobs/>}/>
+          <Route path="/AdvanceSaerch" element={<AdvanceSearch/>}/>
+          <Route path="/Searchview" element={<Searchview/>}/>
+          
         
         </Routes>
           

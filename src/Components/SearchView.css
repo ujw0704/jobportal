@@ -1,0 +1,59 @@
+/* SearchView.css */
+
+/* Container styles */
+.search-view-container {
+    padding: 50px;
+
+  }
+  
+  /* Job details container styles */
+  .job-details {
+    /* background-color: #f0f0f0; */
+    padding-left: 244px;
+
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  .apply-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media queries for responsive design */
+  @media screen and (max-width: 768px) {
+    .search-view-container {
+      padding: 10px;
+    }
+    
+    .job-details {
+       padding: 70px; 
+       padding-bottom: 13px;
+    }
+    
+    .apply-button {
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Media queries for tablet/desktop */
+  @media screen and (min-width: 769px) {
+    .search-view-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .apply-button{
+        width: 280px;
+        
+    }
+}
+  

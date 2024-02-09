@@ -13,6 +13,9 @@ import ReactPlayer from 'react-player';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import PlaceIcon from '@mui/icons-material/Place';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
+
 import "./Home.css"
 
  import images1 from "./images/agriculter1.jpeg"
@@ -27,13 +30,24 @@ import images10 from  "./images/fleximage1.jpg"
 import images11 from "./images/i.t4.jpeg"
 import jobsearch from "./images/jobsearch.mp4"
 //  import jobsearch from "./viedoclip/jobsearch.mp4"
-import { Link } from 'react-browser-router';
-
-//  import { context} from "../App"
-
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { context } from '../App';
+import axios from "axios"
+import SearchIcon from '@mui/icons-material/Search';
+import ArchitectureIcon from '@mui/icons-material/Architecture';
+import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid';
+import HotelIcon from '@mui/icons-material/Hotel';
+ 
 
 function Home() {
   const [isShown, setIsShown] = useState(true);
+   const[centersearch, setcentersearch]= useState("")
+   const{searchResults, setSearchResults}=useContext(context)
+  //  const [currentPage, setCurrentPage] = useState(1);
+
+  // const { search, setSearch}=useContext(context)
+  const navigate = useNavigate();
 
   const [text] = useTypewriter({
     words: ['welcome to kyodai carreer!' ],
@@ -46,9 +60,37 @@ function Home() {
      
   }
 
+  // const handlesearchChange = (e) => {
+  //   setSearch(e.target.value);
+  // };
   
-  return (
-    <div className="home-continer">
+  
+  function handlesearchOnclick(e){
+    e.preventDefault()
+    // setCurrentPage(1); 
+    fetchSearchResults()
+    navigate('/AdvanceSaerch')
+    
+  }     
+  function fetchSearchResults() {
+    axios.get(`http://localhost:8000/centerSearch/:${centersearch}?page`)
+      .then((response) => {
+        if (response.data.status === 200) {
+          console.log('Success!', response.data);
+          setSearchResults(response.data.data);
+        } else {
+          setSearchResults([]);
+          alert("No data");
+        }
+      })
+      .catch((error) => {
+        console.log('Error fetching job data:', error);
+      });
+  }
+
+    
+    return (
+      <div className="home-continer">
    
     <div className='homecontent'> 
          <ReactPlayer url={jobsearch} width="100%" height="100%" controls /> 
@@ -147,7 +189,29 @@ function Home() {
            <div className='findjob'>
             <h1>
              Find jobs
+             <div className="FindSearch">
+          <input
+            type='text'
+            placeholder='Keyword/companyName'
+            value={centersearch} 
+
+            onChange={(e)=>setcentersearch(e.target.value)}
+
+          />
+          <button className='searchdata' onClick={handlesearchOnclick}>search</button>
+          
+       
+        <div className='fjobs container'>
+
+                
+                    <Link to ="/Findjob"className='fjobs'>FindJob</Link><br></br>
+                
+        </div>
+               
+                
+                  
             
+        </div>
                
                 <p className='bestjob'>
 
@@ -226,7 +290,7 @@ function Home() {
 
     <div className='discrpition' >
     <div  className ="icons">
-            <ScreenSearchDesktopIcon  />
+         
           </div>
       <h1>People Search For Jobs on Nippon Career</h1>
         
@@ -251,9 +315,74 @@ function Home() {
       
       <p>Sponsored Jobs appear higher in search results while free listings lose visibility</p>
     </div>
-    </div>
     <div>
+    <div id="wave">
+      <h1>Road Map to kyodai Career</h1>
+    <div class="circle">create account</div>
+    <div class="line-top"></div>
+    <div class="circle">upload cv</div>
+    <div class="line-bottom"></div>
+    <div class="circle">findjob</div>
+    <div class="line-top"></div>
+    <div class="circle">apply Jobs</div>
+    
     </div>
+    
+
+    </div>
+   
+   
+    <div class='popularCategory'>
+  <h1>Popular Category</h1>
+  
+  <div class="category-item">
+    <ScreenSearchDesktopIcon class='icon' />
+    <div class="category-description">
+      <p>Business and Management</p>
+    </div>
+  </div>
+  
+  <div class="category-item">
+    <EngineeringIcon class="icon"/>
+    <div class="category-description">
+      <p>Engineering</p>
+      <p>0 Open Positions</p>
+    </div>
+  </div>
+
+  <div class="category-item">
+    <ArchitectureIcon class='icon'/>
+    <div class="category-description">
+      <p>Architecture</p>
+      <p>0 Open Positions</p>
+    </div>
+  </div>
+
+  <div class="category-item">
+    <MedicationLiquidIcon class='icon'/>
+    <div class="category-description">
+      <p>Health</p>
+      <p>0 Open Positions</p>
+    </div>
+  </div>
+
+  <div class="category-item">
+    <CleaningServicesIcon class='icon'/>
+    <div class="category-description">
+      <p>Cleaning Services</p>
+    </div>
+  </div>
+
+  <div class="category-item">
+    <HotelIcon class='icon'/>
+    <div class="category-description">
+      <p>Restaurant</p>
+    </div>
+  </div>
+
+</div>
+      
+</div>
       </div>
   )
 }

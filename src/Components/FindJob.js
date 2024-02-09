@@ -10,9 +10,9 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 function FindJob() {
-  const [findJob, setFindJob] = useState([]);
-  const {id, setId} = useContext(context)
-  const {search,setSearch} = useContext(context)
+ 
+  const {id, setId,findJob, setFindJob,search,setSearch,} = useContext(context)
+  
   const[ searchFilter, setFilter]= useState([])
 
   const navigate = useNavigate()
