@@ -88,10 +88,10 @@
 }
 
 .imagesCont h6 {
-    background: linear-gradient(to right, #2ecc71, #2586c6);
+    background: linear-gradient(to right, #fff, #2586c6);
     text-align: center;
     background-color: black;
-    color: rgb(33, 163, 39);
+    color: #fff;
     border-radius: 20px;
     padding: 10px;
     margin-top: 10px;

@@ -66,7 +66,7 @@ function Header() {
               {(isLogged) ? <button className="logout" onClick={handlelogout}>logout</button> : <Link to="/Login">Login</Link>}
             </li>
             <li>
-              <Link to="/Findjob">Findjob</Link>
+              <Link to="/Findjob">FindJob</Link>
             </li>
             <li>
               <Link to="/Employers">Employer</Link>
