@@ -1,129 +1,213 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 .employee-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #f5f7fa;
-    cursor: pointer;
-    background-attachment: fixed;
-    margin-bottom: 150px;
-    position: relative;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden; 
+  /* width: 100vw; */
 }
-
-.employerPage {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+.employer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-.employerPage img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 20px;
+.imageparent {
+  /* background-color: #efb39154; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 700px;
+  /* padding-top: -50px; */
 }
-
+ 
+.imageChild2 {
+  height: 400px;
+  width: 300px;
+  padding-bottom: 80px;
+  object-fit: cover;
+}
+.imageChild2 img {
+  height: 100%;
+  width: 100%;
+}
 .employercontext {
-    position: absolute;
-    top: 55%;
-    left: 10%;
-    right: 10%;
-    padding: 20px;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #6c7a89;
+  margin: 0 10px;
+  padding-bottom:50px ;
 }
 
-.employercontext p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.employerClick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
-
 .employer-button {
-    background-color: rgb(49, 89, 150);
-    border: none;
-    color: white;
-    height: 35px;
-    width: 35%;
-    border-radius: 30px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-    /* margin-top: 10px; */
-    cursor: pointer;
+  text-align: center;
+  background-color: #5851d3;
+  width: 200px;
+  height: 40px;
+ 
+  margin-top:2.5rem ;
+  border-radius: 20px;
 }
 
-.imagesCont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+.employerbrand{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 100px;
+}
+.employerImages{
+
+  height: 250px;
+  width: 850px;
+}
+.employerImages img{
+  height:100%;
+  width:100%;
+}
+.carrerContainer{
+  background-color:#99cccd;
+  width: 100vw;
+  height: 350px;
+  margin-bottom:100px ;
+ 
+ 
 }
 
-.images_logo {
-    width: calc(23.3% - 0px); 
-    background: linear-gradient(to right, #2ecc71, #3498db);
-    margin: 20px;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 10px 10px 8px;
+.carrerHeader{
+  flex-direction: column;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-top:1.2rem ;
+}
+.carrerHeader h2 h3{
+  text-align: center;
+  font-size: 20px;
+}
+.iconsection{
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrierparent{
+  padding: 3rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+.carreri{
+  text-align: center;
+
 }
 
-.images_logo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+
+
+.worklifeparent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-direction: column;
+  margin-bottom: 100px;
+
+}
+.worklife{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.workflow h3{
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 50px;
+
+  
+ 
+}
+.workflow  b{
+  text-decoration: underline;
+  color: #5851d3;
+  
+}
+.graphimages{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+
+}
+.garphchild{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 600px!important;
+  width: 800px!important;
+ 
+}
+.garphchild img{
+ height:100%;
+ width: 100%;
+
+}
+.getintouch{
+  background-color:#f3dcf9;
+  width: 100vw;
+  height: 350px;
 }
 
-.imagesCont h6 {
-    background: linear-gradient(to right, #fff, #2586c6);
-    text-align: center;
-    background-color: black;
-    color: #fff;
-    border-radius: 20px;
-    padding: 10px;
-    margin-top: 10px;
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100vw;
+  
 }
 
-/* Media Queries */
-@media screen and (max-width: 767px) {
-    .employercontext {
-        left: 5%;
-        right: 5%;
-        width: 65%;
-    }
 
-    .images_logo {
-        width: calc(50% - 20px);
-    }
+.faq-style-wrapper {
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 50px;
+  
+  
+}
+.section-title{
+  padding-left: 100px;
+}
+.faq-item {
+  margin-bottom: 15px;
 }
 
-@media screen and (max-width: 480px) {
-    .employercontext {
-        left: 5%;
-        right: 5%;
-        padding: 10px;
-    }
-
-    .employer-button {
-        margin-top: -7px;
-        width:  100%;
-        margin-left: 20px;
-    }
-
-    .images_logo {
-        width: 100%;
-    }
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
 }
+
+.faq-answer {
+  display: none;
+}
+
+.faq-answer.active {
+  display: block;
+}
+

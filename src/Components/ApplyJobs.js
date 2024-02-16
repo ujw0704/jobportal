@@ -75,65 +75,66 @@ function ApplyJobs() {
   return (
     <div className='applyJobsContainer'>
       <div className='applyjobs'>
-        <form onSubmit={handleSubmit}>
+        <form  className ="applyFormData"Submit={handleSubmit}>
           <h2 className='headerapply'>Job Application Form :</h2>
-
+           
           <label>
             Name:
-            <input 
+            </label>
+            <input className='applyinput'
               type="text"
               name="name"
               value={applyFormData.name}
               onChange={handleInputChange}
               required
             />
-          </label>
 
           <label>
             Email:
-            <input
+            </label>
+            <input className='applyinput'
               type="email"
               name="email"
               value={applyFormData.email}
               onChange={handleInputChange}
               required
             />
-          </label>
 
           <label>
             Phone Number:
-            <input
+            </label >
+            <input className='applyinput'
               type="tel"
               name="phoneNumber"
               value={applyFormData.phoneNumber}
               onChange={handleInputChange}
               required
             />
-          </label>
 
           <label>
-            Resume (Attach your resume):
-            <input
+            Resume: (Attach your resume):
+            </label>
+            <input className='applyinput'
               type="file"
               name="resume"
               accept=".pdf,.doc,.docx"
               onChange={handleInputChange}
               required
             />
-          </label>
 
           <label>
             Cover Letter:
+            </label>
             <textarea
               name="coverLetter"
               value={applyFormData.coverLetter}
               onChange={handleInputChange}
               required
             />
-          </label>
 
           <label>
             Experience Level:
+            </label>
             <select className='jobSelcet'
               name="experienceLevel"
               value={applyFormData.experienceLevel}
@@ -144,7 +145,6 @@ function ApplyJobs() {
               <option value="fresher">Fresher</option>
               <option value="experienced">Experienced</option>
             </select>
-          </label>
 
           <button className ="SUBMIT" type="submit">Submit Application</button>
         </form>

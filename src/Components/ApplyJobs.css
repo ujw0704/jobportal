@@ -1,59 +1,112 @@
-*{
+* {
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
-
 }
 
-.applyJobsContainer{
-    height: 100vh;
-    width: 100%;
-    margin-top: 96px;
-     margin-bottom: 60px; 
-  
-   
+.applyJobsContainer {
     
-}
-
-.applyJobs{
-  flex-wrap: wrap;
-    margin-right: 230px;
+    width: 100%;
+    /* margin-top: 96px;
+    margin-bottom: 60px; */
+    background-image: url('./images/singleback.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    
-
-
 }
+
+
+.applyJobs {
+    
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+   
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.applyFormData{
+    margin-top: 40px;
+
+    margin: 10px auto;
+    text-align: center;
+    /* border: 1px solid rgb(235, 229, 229); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+   margin-bottom: 50px;
+   width: 539px;
+    height: 700px;
+   
+}
+
 .headerapply {
     text-align: center;
-    margin-left: 84px;
-  
-    font-size:20px ;
+    /* margin-left: 84px; */
+    /* margin-top: 90px;
+     */
+    font-size: 24px; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-    font-family: "italic";
+    font-style: italic; 
     color: #31846f !important;
 }
-.jobSelcet{
-    height: 29px;
-    width: 186px;
+
+.applyinput{
+    height: 270px;
+
+
+    min-width:  60%;
+    max-width: 60%;
+    border-radius: 10px;
+    
+    
+}
+.applyinput label{
+    font-size: 15px;
+
+    width: 50px;
+    padding: 5px;
+}
+.jobSelcet {
+    height: 41px;
+    width: 58%;
+    font-size: 18px;
 }
 
-textarea{
+textarea {
     border-radius: 5px;
+    min-width:  60%;
+    max-width: 60%;
+    height: 550px;
+    font-size: 18px; 
 }
 
-.SUBMIT{
-    /* height: 10px; */
-    width: 100px;
-    margin-left: 100px;
-   padding: 3px;
-   border-radius: 30px;
-
-
+.SUBMIT {
+    width: 150px; 
+  
+    padding: 10px; 
+    border-radius: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 70px;
 }
+
+.SUBMIT:hover {
+    background-color: #0056b3;
+}
+
 @media screen and (max-width: 768px) {
     .applyJobs {
         margin-top: 7%;
@@ -64,5 +117,12 @@ textarea{
     }
     .jobSelcet {
         margin-bottom: 10px;
+    }
+
+    .headerapply {
+        font-size: 20px; 
+    }
+    .applyFormData{
+        width: 413px;
     }
 }

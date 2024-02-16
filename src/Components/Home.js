@@ -1,6 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
+
 import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import PlaceIcon from "@mui/icons-material/Place";
 import EngineeringIcon from "@mui/icons-material/Engineering";
@@ -14,10 +14,55 @@ import search from "../Components/images/search.png";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { context } from '../App';
+import axios from "axios"
 
 import "./Home.css";
 
 function Home() {
+  const [isShown, setIsShown] = useState(true);
+   const[centersearch, setcentersearch]= useState("")
+   const{searchResults, setSearchResults}=useContext(context)
+   const navigate = useNavigate();
+  //  const [currentPage, setCurrentPage] = useState(1);
+
+  // const { search, setSearch}=useContext(context)
+  function handleSubmit(){
+    setIsShown((current => !current))
+   
+}
+
+// const handlesearchChange = (e) => {
+//   setSearch(e.target.value);
+// };
+
+
+function handlesearchOnclick(e){
+  e.preventDefault()
+  // setCurrentPage(1); 
+  fetchSearchResults()
+  navigate('/AdvanceSaerch')
+  
+}     
+function fetchSearchResults() {
+  axios.get(`http://localhost:8000/centerSearch/:${centersearch}?page`)
+    .then((response) => {
+      if (response.data.status === 200) {
+        console.log('Success!', response.data);
+        setSearchResults(response.data.data);
+      } else {
+        setSearchResults([]);
+        alert("No data");
+      }
+    })
+    .catch((error) => {
+      console.log('Error fetching job data:', error);
+    });
+}
+
+  
   return (
     <div className="home-container">
       <div className="homesection">
@@ -52,11 +97,11 @@ function Home() {
           <input
             type="text"
             placeholder="Keyword/companyName"
-            // value={centersearch}
+            value={centersearch}
 
-            // onChange={(e)=>setcentersearch(e.target.value)}
+            onChange={(e)=>setcentersearch(e.target.value)}
           />
-          <button className="searchdata">
+          <button onClick={handlesearchOnclick}className="searchdata">
             <SearchIcon />
           </button>
         </div>

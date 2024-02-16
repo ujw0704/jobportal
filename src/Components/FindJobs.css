@@ -51,15 +51,15 @@
   
   .jobCat {
     position: relative;
-    border: 1px solid rgb(29, 193, 89);
+    /* border: 1px solid rgb(29, 193, 89); */
     /* font-weight: bold; */
     border-radius: 10px;
-    height: 280px;
-    width: 65%;
-    max-width: 700px;
+    height: 350px;
+    width: 35%;
+   
     margin: 20px;
     box-shadow: 5px 2px 5px;
-    color: rgb(19, 165, 75);
+    /* color: rgb(19, 165, 75); */
   }
   
   .jobCat h2,
@@ -73,21 +73,21 @@
   .Applybutton {
     position: absolute;
     top: 80%;
-   
-    width: 70px;
+    height: 40px;
+    width: 150px;
     border-radius: 5px;
     box-shadow: 5px 2px 5px;
   }
   
   .veiwButton {
-    left: 23%;
+    left: 13%;
     background: red;
-    color: black;
+    color:white;
   }
   
   .Applybutton {
-    left: 60%;
-    color: #000;
+    left: 50%;
+    color: white;
   }
   
   /* Media Queries */
