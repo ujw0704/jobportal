@@ -132,7 +132,7 @@ sample cover letter</p>
                 </div>
                 <div className="carrierparent">
             <div className="carreri">
-            import MicIcon from '@mui/icons-material/Mic';
+             <MicIcon sx={{ fontSize: 60 }}/>
             </div>
                 <div>
                   <p>Interview Guide</p>

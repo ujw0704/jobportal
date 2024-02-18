@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import { Link} from 'react-router-dom';
- import axios from "axios"
-import './EmployerLogin.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import   employepic from "../Components/images/employee.png";
+
+import axios from "axios";
+import "./EmployerLogin.css";
 
 function EmployerLogin() {
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
   const [LoginData, setLoginData] = useState({
-    company: '',
-    password: '',
-    number: '',
-    email: '',
-    position: '',
-    worktype: '',
-    workLocation: '',
+    company: "",
+    password: "",
+    number: "",
+    email: "",
+    position: "",
+    worktype: "",
+    workLocation: "",
   });
-
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log(LoginData);
     // navigate('/Login');
-    axios.post('http://localhost:8000/jobs', LoginData)
-    .then(response => {
-       console.log(response.data);
-     
-    })
-    .catch(error => {
-      console.error('Error job data:', error);
-    });
-    
+    axios
+      .post("http://localhost:8000/jobs", LoginData)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error job data:", error);
+      });
   }
 
   function handleChange(event) {
@@ -40,112 +40,121 @@ function EmployerLogin() {
 
   return (
     <div className="Employer-login">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="Company">Company Name:</label>
-        <input
-          type="text"
-          placeholder="e.g., Amazon & CarrenZen"
-          value={LoginData.company}
-          id="company"
-          name="company"
-          autoComplete="off"
-          required
-          onChange={handleChange}
-        />
+      <div className="employeform">
+    
+        <div className="emplyeimage-parents">
+          <div className="employeeimage-child">
+            <img src={employepic } alt="Employee" />
+          </div>
+        </div>
 
-      
+        <form className="employeform" onSubmit={handleSubmit}>
+          <label htmlFor="Company">Company Name:</label>
+          <input
+            className="employeeinputs"
+            type="text"
+            placeholder="e.g., Amazon & CarrenZen"
+            value={LoginData.company}
+            id="company"
+            name="company"
+            autoComplete="off"
+            required
+            onChange={handleChange}
+          />
 
-<label htmlFor="Mobile">Mobile:</label>
-<input
-  type="text"
-  id="number"
-  name="number"
-  placeholder="Enter your Number"
-  value={LoginData.number}
-  pattern="[0-9]*"  
-  required
-  onChange={handleChange}
-/>
+          <label htmlFor="Mobile">Mobile:</label>
+          <input
+            className="employeeinputs"
+            type="text"
+            id="number"
+            name="number"
+            placeholder="Enter your Number"
+            value={LoginData.number}
+            pattern="[0-9]*"
+            required
+            onChange={handleChange}
+          />
 
-        <label htmlFor="Password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          value={LoginData.password}
-          autoComplete="off"
-          required
-          onChange={handleChange}
-        />
+          <label htmlFor="Password">Password:</label>
+          <input
+            className="employeeinputs"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            value={LoginData.password}
+            autoComplete="off"
+            required
+            onChange={handleChange}
+          />
 
-        <label htmlFor="Email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your Email"
-          value={LoginData.email}
-          autoComplete="off"
-          required
-          onChange={handleChange}
-        />
+          <label htmlFor="Email">Email:</label>
+          <input
+            className="employeeinputs"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your Email"
+            value={LoginData.email}
+            autoComplete="off"
+            required
+            onChange={handleChange}
+          />
 
-        <label htmlFor="Position">Position:</label>
-        <input
-          type="text"
-          id="position"
-          name="position"
-          placeholder="Enter your position"
-          value={LoginData.position}
-          autoComplete="off"
-          onChange={handleChange}
-        />
-          
-        <label htmlFor="Work Type">Work Type:</label>
-        <select
+          <label htmlFor="Position">Position:</label>
+          <input
+            className="employeeinputs"
+            type="text"
+            id="position"
+            name="position"
+            placeholder="Enter your position"
+            value={LoginData.position}
+            autoComplete="off"
+            onChange={handleChange}
+          />
 
-          type="text"
-          id="worktype"
-          name="worktype"
-          value={LoginData.worktype}
-          autoComplete="off"
-          onChange={handleChange}
-      
-        >
-          
-           <option value="">Select Work Type</option>
-          <option value="full-time"> Full-Time</option>
-          <option value="part-time">Part-time"</option>
-          <option value="intership">Internship</option>
-          <option value="contract">contract</option>
-          
+          <label htmlFor="Work Type">Work Type:</label>
+          <select
+            className="employeeinputs"
+            type="text"
+            id="worktype"
+            name="worktype"
+            value={LoginData.worktype}
+            autoComplete="off"
+            onChange={handleChange}
+          >
+            <option value="">Select Work Type</option>
+            <option value="full-time"> Full-Time</option>
+            <option value="part-time">Part-time"</option>
+            <option value="intership">Internship</option>
+            <option value="contract">contract</option>
+          </select>
 
+          <label htmlFor="Work Location">Work Location:</label>
+          <input
+            className="employeeinputs"
+            type="text"
+            id="workLocation"
+            name="workLocation"
+            placeholder="Enter your work location"
+            value={LoginData.workLocation}
+            autoComplete="off"
+            onChange={handleChange}
+          />
+            <div className="employbtn">
 
-       
-        </select>
+          <button className="employerbtn" type="submit">
+            Submit
+          </button>
+            </div>
 
-        <label htmlFor="Work Location">Work Location:</label>
-        <input
-          type="text"
-          id="workLocation"
-          name="workLocation"
-          placeholder="Enter your work location"
-          value={LoginData.workLocation}
-          autoComplete="off"
-          onChange={handleChange}
-        />
-
-        <button className="employerbtn" type="submit">
-          Submit
-        </button>
-
-        <ul className="employe">
-          <li>
-            Don't have an account? <Link to="/Login">Login!</Link>
-          </li>
-        </ul>
-      </form>
+          <ul className="employe" style={{color:"blue"}}>
+            <li >
+              Don't have an account? <Link to="/Login">Login!</Link>
+            </li>
+          </ul>
+        </form>
+      </div>
     </div>
   );
 }

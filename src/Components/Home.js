@@ -82,8 +82,8 @@ function fetchSearchResults() {
             </Link>
             {/* Link to Post Job */}
             <br />
-            <Link className="job-apply" to="/apply/">
-              Apply
+            <Link className="job-apply" to="/ApplyJobs">
+              Apply Jobs
             </Link>
           </div>
           {/* <h1>FIND-JOBS</h1> */}

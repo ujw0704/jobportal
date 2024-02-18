@@ -1,63 +1,79 @@
+/* Default styles */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.contact h1{
+  align-items: center;
+  
+}
+
 
 .formContact {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.formContact h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: green;
-}
-
-.formContact label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.formContact input[type="text"],
-.formContact textarea {
+  flex-direction: column;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  /* border: 1px solid #ccc; */
+  max-width: 400px; 
+  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+
 }
 
-.formContact textarea {
-  resize: vertical; /* Allow vertical resizing of textarea */
+
+.conatctinput {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contactinput {
+  width: 100%;
+  height: 100px; 
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .conatctbtn {
   text-align: center;
 }
 
-.conatctbtn button {
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+@media (max-width: 767px) {
+  .formContact {
+    max-width: 90%; 
+  }
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .conatctimageparents {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .conatcimageschild {
+    text-align: center;
+  }
+
+  .conatcimageschild img {
+    max-width: 70%;
+    height: auto;
+  }
+
   .formContact {
-    width: 90%;
+    flex: 1;
+    margin-right: 80px; 
   }
+}
 
-  .formContact h1 {
-    font-size: 20px;
-  }
-
-  .formContact input[type="text"],
-  .formContact textarea {
-    padding: 8px;
-    font-size: 14px;
-  }}

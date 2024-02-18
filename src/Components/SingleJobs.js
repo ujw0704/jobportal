@@ -12,7 +12,7 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import CreateIcon from "@mui/icons-material/Create";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import "./Singlejobs.css";
-import singlejob from "../Components/images/singlejob.png";
+// import singlejob from "../Components/images/singlejob.png";
 import singlebg from "../Components/images/singlebg.jpg"
 
 
