@@ -23,7 +23,7 @@
 .home-container::after {
   content: "";
   position: absolute;
-  bottom: -650px;
+  bottom: -758px;
   right: 0px;
   left: 0;
   height: 75%;

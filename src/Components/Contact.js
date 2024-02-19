@@ -32,7 +32,7 @@ return(
     <label htmlFor="Email">Email:</label>
     <input  className ="conatctinput"type="text" name="Email" id="email" placeholder="Enter your Email" value={form.Email} required onChange={handleChange}/>
     <label htmlFor="Comment">comment:</label>
-    <textarea  className="contactinput"type ="textarea" id="textarea" name="textarea" placeholder="Enter your Text" value={form.textarea} required onChange={handleChange}></textarea>
+    <textarea  className="contacttext"type ="textarea" id="textarea" name="textarea" placeholder="Enter your Text" value={form.textarea} required onChange={handleChange}></textarea>
      <div className="conatctbtn">
 
     <button  style={{ width: "127px"}}type="submit">Submit</button>

@@ -97,8 +97,8 @@ function Login() {
           </span>
         </div>
         <button type='submit'>LOGIN</button> 
-      <div className='register'>
-      Don't have an account? <Link to="/register">Sign Up!</Link>
+      <div >
+      Don't have an account? <Link to="/register" className='reglink'>Sign Up!</Link>
       </div>
       </form>
 

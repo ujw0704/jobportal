@@ -16,9 +16,13 @@
   
        min-height: 100vh;
    
+    }
+.employerLink{
+    text-decoration: none;
+    color: #585b77!important
 
-   
 }
+   
 .employeform{
  display: flex;
  justify-content: center;
@@ -46,6 +50,7 @@ align-items: center;
 
 }
 .employeform{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

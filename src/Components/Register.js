@@ -32,7 +32,7 @@ function Register() {
    
     return (
       <div className='register'>
-          <form onSubmit={handleSubmit} >
+          <form  className="registerdata"onSubmit={handleSubmit} >
   
              <div className='register'>
               <h2 className='heder-register'>Register Here</h2>

@@ -46,6 +46,7 @@ function EmployerLogin() {
           <div className="employeeimage-child">
             <img src={employepic } alt="Employee" />
           </div>
+          <h1 style={{color:"green"}}>Post your Job Here </h1>
         </div>
 
         <form className="employeform" onSubmit={handleSubmit}>
@@ -150,7 +151,7 @@ function EmployerLogin() {
 
           <ul className="employe" style={{color:"blue"}}>
             <li >
-              Don't have an account? <Link to="/Login">Login!</Link>
+              Don't have an account? <Link to="/Login" className="employerLink">Login!</Link>
             </li>
           </ul>
         </form>

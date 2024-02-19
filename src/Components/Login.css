@@ -29,6 +29,7 @@ body{
   font-weight: 300px;
   padding-right: 50px;
   font-family: "italic";
+  min-height: 100vh;
   
 }
 
@@ -161,7 +162,7 @@ button:hover {
 
 .password-toggle{
     position: absolute;
-    top: 178px;
+    top: 192px;
     right: -77px;
     width: 20px;
     height: 20px;
@@ -174,22 +175,23 @@ button:hover {
     
 
 }
-
+.reglink{
+    color: #585b77!important;
+}
     
-.register{
+.Register{
+  
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
    color: #1a27bc!important;
     clear: both;
+    
     }.submit:disabled{
         opacity: .6;
         }
-        .register a{
-            color: #1a27bc!important;
-        }
-
+        
         @media screen and (max-width: 767px){
 
             button{
