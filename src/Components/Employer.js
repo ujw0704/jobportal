@@ -1,5 +1,5 @@
 import {React,useState} from "react";
-import hairing from "../Components/images/hiring.jpg";
+import hairing from "../Components/images/job-hiring.jpg";
 import employerImg from "../Components/images/employer-6.jpg";
 import employerbrand from "../Components/images/employerbrand.png"
 import MailIcon from '@mui/icons-material/Mail';

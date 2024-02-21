@@ -94,20 +94,23 @@
   
   @media only screen and (max-width: 768px) {
     .jobCat {
-      width: 65%;
+      width: 110%;
+      height: 386px;
 
     }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    .seachbar {
-      flex-direction: column;
-      text-align: center;
-      width: 198px;
-      margin-left: 116px;
+
+    .searchicons{
+      margin-top: 18px;
     }
-  
-    #search {
+    @media only screen and (max-width: 480px) {
+      .seachbar {
+        flex-direction: column;
+        text-align: center;
+        width: 198px;
+        margin-left: 116px;
+      }
+      
+      #search {
       width: 100%;
       margin-top: 20px;
     }
@@ -117,19 +120,29 @@
       margin-bottom: 10px;
       right: 10px;
     }
-  
     
-        
-  
-    .Applybutton.veiwButton {
+    
+    
+    
+    .Applybutton{
+      width: 80px!important;
+      margin-top: 25px;
+      
+     margin-left: 19px;
+      
+    }
+    .veiwButton {
       position: absolute;
-      width: 20%;
-      margin: 5px;
-      margin-top: 10px;
-      width: 50px;
-      height: 30px;
+      width: 80px!important;
+      margin: 10px;
+      margin-top: 25px;
+      /* width: 50px; */
+      /* height: 30px; */
       /* margin-bottom: 20px; */
     
     }
+  }.jobCat p{
+    font-size: 17px;
   }
   
+}

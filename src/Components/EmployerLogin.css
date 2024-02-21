@@ -23,12 +23,6 @@
 
 }
    
-.employeform{
- display: flex;
- justify-content: center;
-align-items: center;
-
-}
 
 .employeimage-parents{
     display: flex;
@@ -60,7 +54,7 @@ align-items: center;
     height: 650px;
     width: 876px;
     text-align: center;
-   
+    
 
     
     
@@ -90,3 +84,15 @@ align-items: center;
 .employ a{
     color: blue!important;
 }
+@media only screen and(max-width: 780px) {
+    .employeform{
+        flex-direction: column!important;
+        display: flex;
+       
+    }.employeeimage-child{
+
+    height: 229px;
+    margin-top: 266px;
+    } 
+}
+
