@@ -5,11 +5,18 @@ function About() {
   return (
     <div className='about-container'>
       <div className='about-section'>
+        <div className='about-title'>
+          <div>
+            <div>
+              
+            </div>
+          </div>
         <h1>About Our Job Portal</h1>
         <p>
         Welcome to Kyodai Japan Job, a groundbreaking initiative powered by Yokohama Business  Group Japan with strong partnership of Kyodai Business India, dedicated to transforming the employment landscape from India to Japan. Our revolutionary platform tirelessly endeavors to bridge the gap between forward-thinking companies seeking their perfect match and individuals yearning to amplify their career opportunities in Japan. 
-
+         
         </p>
+        </div>
         <p>
         At Kyodai Job,  we've meticulously crafted a user-friendly space that goes beyond the conventional norms of job hunting. It is not merely a job portal; it is an immersive experience designed to be your one-stop solution for all your employment and career advancement needs. 
         </p>

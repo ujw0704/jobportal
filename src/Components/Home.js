@@ -13,6 +13,8 @@ import back from "../Components/images/background-images.png";
 import search from "../Components/images/search.png";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from 'react-icons/fa';
+import chart from "../Components/images/forignworker.png"
+import benfit from "../Components/images/befint.png"
 import { FaInstagram } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -96,7 +98,7 @@ function fetchSearchResults() {
         <div className="FindSearch">
           <input
             type="text"
-            placeholder="Keyword/companyName"
+            placeholder="Keyword/companyName/Position"
             value={centersearch}
 
             onChange={(e)=>setcentersearch(e.target.value)}
@@ -230,6 +232,196 @@ function fetchSearchResults() {
         </div>
 
       <div>
+      
+      <section>
+                 
+        <div className="graphcontainer">
+          <div className="chartcontaint" >
+            <div className="chart">
+           <p>
+            
+             The increase is apparently due to government promotion of the engagement of highly skilled && semiskilled foreign workers, exchange students, and technical interns in the workforce, as well as improvements in the overall employment situation leading to more hiring of permanent residents and spouses of Japanese nationals.<br>
+             </br>
+             <p>
+             By industry, 29.7% of foreign workers work in manufacturing, and 15.8% in the service industry, while wholesale/retail and accommodation/food and drink both have a ratio of 12.7%. It is a clear indication that industries suffering from labor shortages have a need to rely on foreign workers.
+
+             </p>
+           </p>
+            </div>
+          </div>
+          <div className="chartimges">
+            <div className="chartchild">
+               <img src={chart}alt="chart"/>
+            </div>
+
+          </div>
+
+    
+
+
+        </div>
+      </section>
+     
+      
+      <section>
+        <div className="youthindia">
+          <div className="youthchild">
+            <img src={benfit} alt=""/>
+          </div>
+
+        </div>
+      </section>
+        
+      <section>
+        <div className="youthcontent">
+          <h1>What is the Process for SSW Visa ?</h1>
+          <hr/>
+        
+      <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>Step 1</h2>
+                <p>
+                   Learn Japanese Language & pass JFT/N4 exam
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Step 2</h2>
+                <p>
+                  Pass Skill exam in any field of your choice aviable(under SSW Programme)
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Step 3</h2>
+                <p>
+                   Receive Assitance for Job Placement
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+          
+            <div class="content">
+                <h2>Step 4</h2>
+                <p>
+                   Get employer by accepting company
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Step 5</h2>
+                <p>
+                   Application for Coe (will be assitanced)
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Step 5</h2>
+                <p>
+                   Issue of Coe by Japan embassy
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Step 6</h2>
+                <p>
+                  Enter Japan
+                </p>
+            </div>
+        </div>
+    </div>
+        </div>
+      </section>
+      <section>
+      <div class="custom-timeline-container">
+        <h2>What is the Process for High Skill Visa (In Japan)</h2>
+    <div class="custom-timeline">
+        
+       
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-circle">1</div>
+            <div class="custom-timeline-content">
+                <h5>learn language</h5>
+                <p>Learn Japanse Language & Pass JLPT(min Level-3)</p>
+            </div>
+        </div>
+        
+       
+        <div class="custom-timeline-path"></div>
+        
+        
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-content">
+                <h5>Interview</h5>
+                <p>Connect with Us For Preliminary interview</p>
+            </div>
+            <div class="custom-timeline-circle">2</div>
+        </div>
+        
+       
+        <div class="custom-timeline-path"></div>
+        
+       
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-circle">3</div>
+            <div class="custom-timeline-content">
+                <h5>Job Placemanent</h5>
+                <p>Receive Assitance For  Job Placement<br/>Get Offer From Desired Company(for prelim Pass)</p>
+            </div>
+        </div>
+        <div class="custom-timeline-path"></div>
+        
+        
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-content">
+                <h5>Get Hired</h5>
+                <p>Get Interview with your Hiring Company</p>
+            </div>
+            <div class="custom-timeline-circle">4</div>
+        </div>
+        <div class="custom-timeline-path"></div>
+        
+       
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-circle">5</div>
+            <div class="custom-timeline-content">
+                <h5>Get Assitance</h5>
+                <p>You Will Get Assitance For  Application of Coe(we will Guide You)</p>
+            </div>
+        </div>
+        <div class="custom-timeline-path"></div>
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-content">
+                <h5>Get in Touch With Japanse Ambassy </h5>
+                <p>Issue of Coe By Japanse Ambassy</p>
+            </div>
+            <div class="custom-timeline-circle">6</div>
+        </div>
+        <div class="custom-timeline-path"></div>
+        
+        
+        
+        <div class="custom-timeline-section">
+            <div class="custom-timeline-circle">7</div>
+            <div class="custom-timeline-content">
+                <h5>Issue Of Visa</h5>
+                <p>Visa Issue Application In India</p>
+            </div>
+        </div>
+        <div class="custom-timeline-path"></div>
+        
+    </div>
+</div>
+
+      </section>
+      
+        
         <section>
           <div className="getstarted">
             <h1>looking for job</h1>
@@ -241,7 +433,7 @@ function fetchSearchResults() {
               <img
                 src="https://supportfinity.com/assets/images/home/skilled-mini/skilled-mini@3x.webp"
                 alt=""
-              />
+                />
             </div>
           </div>
         </section>
@@ -265,6 +457,13 @@ function fetchSearchResults() {
           </div>
         </section>
       </div>
+        <section>
+        <div>
+           <h6>Company That  provide Free Assitance to  Land you Get a  Job in Japan</h6>
+
+        </div>
+
+        </section>
     </div>
   );
 }

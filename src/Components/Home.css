@@ -389,28 +389,261 @@ h4 {
   border-radius: 5px !important;
 
 }
-/* .fjobs {
-  margin: 10px;
-  padding: 25px;
-  background-color: #1ca93d;
+
+
+
+.graphcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  
+  
+}
+.chartcontaint{
+  flex-direction: column;                                
+  display: flex;
+  background-color: #aacadf;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 70%;
+  height: 60vh;
+  
+}
+.chart{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+
+}
+.chart p{
+  font-size: 20px;
+
+  font-weight: 200;
+  padding-left: 1.5rem;
+  letter-spacing: 2px;
+  resize: horizontal;
+  /* overflow: auto; */
+}
+.imagecart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chartchild{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 600px;
+}
+.chartchild img{
+  height: 100%;
+  width: 100%;
+}
+.youthindia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  
+}
+.youthchild{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width:  86%;
+}
+.youthchild img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.youthcontent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.youthcontent h1{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.youthcontent h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.youthcont p {
+  font-size: 15px;
+}
+
+.timeline {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #474C93;
+  width: 85%;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 100px;
+}
+
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 6px;
+  margin-left: -3px;
+  background-color: #FFF;
+}
+
+.container {
+  width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -17px;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 5px solid #E5BF15;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border: medium solid #FFF;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #FFF;
+}
+
+.right::before {
+  content: " ";
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border: medium solid #FFF;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #FFF transparent transparent;
+}
+
+.right::after {
+  left: -18px;
+}
+
+.content {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+  background-color: #FFF;
+}
+.custom-timeline-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.custom-timeline-container h2{
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.custom-timeline {
+  margin-bottom: 100px;
+  background-color: #fff;
   border-radius: 5px;
-  margin-right: 7px;
-  margin-left: 0px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.custom-timeline h2 {
+  color: #25864f!important;
+}
+
+.custom-timeline-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-timeline-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.custom-timeline-content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.custom-timeline-path {
+  height: 2px;
+  background-color: #007bff;
+  margin-bottom: 20px;
+}
 
 
-} */
+
+
+
 
 .getstarted {
-  height: 181px;
-  width: 900px;
+  
+  padding-left: 0px;
+  width: 981px;
+  height: 203px;
+margin: auto;
   background-color: #2ecc71;
-  border-radius: 50px;
+  border-radius: 95px;
   justify-content: right;
   align-items: center;
   display: flex;
   margin-bottom: 213px;
-
+  margin-left: 245px;
   margin-top: 77px;
+
+
 }
 .getstarted h1 {
   margin-right: 138px;
@@ -493,6 +726,10 @@ h4 {
   transform: translateX(0);
 }
 
+
+
+
+
 .share-button a:nth-of-type(1) {
   transition-delay: 1s;
 }
@@ -512,32 +749,11 @@ h4 {
 @media screen and (max-width: 767px) {
   .home-container {
     flex-direction: column;
-    max-width: 300px;
+  max-width:  370px;
     min-height: 450px;
   }
 
-  .video-overlay {
-    font-size: 8px;
-
-    top: 15%;
-    left: 58%;
-    right: 0;
-    bottom: auto;
-    transform: translate(-50%, -25%);
-    position: absolute;
-    z-index: 999;
-    /* background-color: rgba(0, 0, 0, 0.8); */
-    padding: 20px;
-    color: #fff;
-    /* display:none; */
-  }
-  .social-icons p {
-    /* margin-right:50px ; */
-  }
-  .social-icons l1 {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
+ 
   .discrpition {
     margin: 20px;
     line-height: 1.4em;
@@ -607,16 +823,7 @@ h4 {
     margin-bottom: 23px;
   }
 
-  .fjobs {
-    flex-direction: column;
-
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-
-    padding-bottom: 0px;
-    padding-top: 0px;
-  }
+  
   /* }.icons p{
     margin: 10px;
     font-size: 10px;
@@ -669,3 +876,58 @@ h4 {
     left: 298px;
   }
 }
+@media screen and (max-width: 600px) {
+  .timeline::after {
+      left: 31px;
+  }
+
+  .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+  }
+
+  .container::before {
+      left: 60px;
+      border: medium solid #FFF;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #FFF transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+      left: 14px;
+  }
+
+  .right {
+      left: 0%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .timeline::after {
+      left: 31px;
+  }
+
+  .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+  }
+
+  .container::before {
+      left: 60px;
+      border: medium solid #FFF;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #FFF transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+      left: 14px;
+  }
+
+  .right {
+      left: 0%;
+  }
+}
+

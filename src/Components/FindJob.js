@@ -58,6 +58,8 @@ function FindJob() {
       (resp) =>
         resp.title?.toLowerCase().includes(search.toLowerCase()) ||
         false ||
+        resp.position?.toLowerCase().includes(search.toLowerCase()) ||
+        false ||
         resp.company?.toLowerCase().includes(search.toLowerCase()) ||
         false
     );

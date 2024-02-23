@@ -56,7 +56,7 @@ function AdvanceSearch() {
 
   function handleMatchedResults() {
     const matchedResults = searchResults.filter(data => {
-      const companyName = data.company.toLowerCase();
+      const companyName = data.position.toLowerCase();
       const searchQuery = centersearch.toLowerCase();
       return companyName.includes(searchQuery);
     });
