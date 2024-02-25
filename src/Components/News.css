@@ -1,5 +1,5 @@
 .news-feed-container {
-    
+
     display: flex;
     flex-direction: column;
   }
@@ -32,7 +32,7 @@
     margin-bottom: 10px;
   }
   
-  span {
+ .content span {
     display: block;
     margin-bottom: 5px;
   }

@@ -5,6 +5,7 @@
   padding: 10px 20px;
   background-image: linear-gradient(to right, #2ecc71, #3498db);
   color: white;
+  overflow: hidden;
 }
 
 .headerContainer span {
