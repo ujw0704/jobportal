@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "./News.css"; 
 
 function NewsFeed() {
   const [newsFeed, setNewsFeed] = useState([]);
@@ -16,19 +17,20 @@ function NewsFeed() {
   }, []);
 
   return (
-    <div>
+    <div className="news-feed-container">
       {newsFeed.map((news, index) => {
         return (
-          <div key={index}>
-            <div>
+          <div className="news-item" key={index}>
+            <div className="image-container">
               <img src={news.urlToImage} alt="news" />
             </div>
-            <h1>{news.content}</h1>
-            <h1>{news.source.name}</h1>
-            <h1>{news.description}</h1>
-            <h1>{news.author}</h1>
-            <h1>{news.title}</h1>
-            <h1>{news.url}</h1>
+            <div className="content">
+              <h2>{news.title}</h2>
+              <p>{news.description}</p>
+              <span>{news.source.name}</span>
+              <span>{news.author}</span>
+              <a href={news.url} target="_blank" rel="noopener noreferrer">Read more</a>
+            </div>
           </div>
         );
       })}

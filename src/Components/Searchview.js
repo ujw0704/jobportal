@@ -21,7 +21,15 @@ function Searchview() {
   return (
     <div className="search-view-container">
       {state && state.singleJob && (
+        
         <div className="job-details">
+          <div className='imagesseach'>
+            <div className='imagessaerch'>
+              <img src='' alt=''/>
+            </div>
+          </div>
+          <div className='jobdetaileschild'>
+
           <h2>Company: {state.singleJob.company}</h2>
           <p>Email: {state.singleJob.email}</p>
           <p>Position: {state.singleJob.position}</p>
@@ -30,11 +38,14 @@ function Searchview() {
           <p>Created At: {state.singleJob.createdAt}</p>
           <p>Updated At: {state.singleJob.updatedAt}</p>
           <button className='apply-button' onClick={handleApplyClick}>Apply</button>
+          </div>
         </div>
       )}
 
       {state && state.searchResults && (
         <div className="search-results">
+          <div className='resultschild'>
+
           {state.searchResults.map((job, index) => (
             <div className="job-item" key={index}>
               <h2>Company: {job.company}</h2>
@@ -47,6 +58,7 @@ function Searchview() {
               <button className='apply-button' onClick={handleApplyClick}>Apply</button>
             </div>
           ))}
+          </div>
         </div>
       )}
 
