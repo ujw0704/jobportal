@@ -682,6 +682,8 @@ margin: auto;
   height: 80px;
   bottom: 78px;
 
+  left: 75px;
+
   background: #dfe6e9;
   border-radius: 40px;
   display: flex;
@@ -837,7 +839,7 @@ margin: auto;
     padding-left: 0px;
     margin-left: 0px;
     padding-right: 0px;
-    width: 334p
+    width: 334px;
     
 
     
@@ -864,15 +866,23 @@ margin: auto;
 
   .jobimages img{
     width: 109%;
-    height: 354px;
+    height: 238px;
     object-fit: cover;
     margin-top: 152px
   
 }
 .share-button{
  
-  margin-left: 168px;
-  margin-bottom: 26px;
- margin-top: 0px;
+ 
+  width: 221px;
+  height: 60px;
+  margin-left: 176px;
+  padding-bottom: 0px;
 
-}}
+
+}.share-button span{
+  padding-top: 0px;
+}.getstarted h1 {
+  margin-right: 55px
+}
+}

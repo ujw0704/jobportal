@@ -76,8 +76,9 @@ function AdvanceSearch() {
   const totalPages = Math.ceil(searchResults.length / resultsPerPage);
 
   return (
-    <div advance-search-container>
-     
+    <div  className="advance-search-container">
+     <div >
+
       <div className="results-container">
         {searchResults.length > 0 ? (
           <>
@@ -91,14 +92,29 @@ function AdvanceSearch() {
             {/* <div>
               {Array.from({ length: totalPages }, (_, i) => (
                 <button className= "pagination-button"style={{ width: "20px" }} key={i} onClick={() => handlePaginationClick(i + 1)}>{i + 1}</button>
-              ))}
-            </div> */}
+                ))}
+              </div> */}
           </>
         ) : (
-            <p>No search results</p>
+          <p>No search results</p>
           )}
       </div>
+      <div className='reusmebulider'>
+        <div>
+
+        <h3> Build your C.v As  You Search! </h3>
+        </div>
+        <div className='resumechild'>
+
+
+      <a  className="resume"href="https://resume.io/resume-templates" target="_blank">Resume Templates</a>
     </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      
   );
 }
 
