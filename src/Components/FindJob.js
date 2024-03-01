@@ -12,6 +12,8 @@ import UpdateIcon from "@mui/icons-material/Update";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import CreateIcon from '@mui/icons-material/Create';
+import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
+import InfoIcon from '@mui/icons-material/Info';
 
 
 
@@ -118,6 +120,8 @@ function FindJob() {
                 
                 <Diversity3Icon /> WorkType: {job.worktype}
               </p>
+              <p> <CurrencyYenIcon/>salary: {job.salary}</p>
+              <p> <InfoIcon/>jobDescription:{job.jobDescription}</p>
               <button
                 className="veiwButton"
                 onClick={(e) => handleClick(e, job._id)}

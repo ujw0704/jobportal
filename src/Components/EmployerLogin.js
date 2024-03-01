@@ -1,30 +1,40 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import   employepic from "../Components/images/employee.png";
+import employepic from "../Components/images/employee.png";
 
 import axios from "axios";
 import "./EmployerLogin.css";
+import { useNavigate } from "react-router-dom";
 
 function EmployerLogin() {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
+
   const [LoginData, setLoginData] = useState({
     company: "",
-    password: "",
+    // password: "",
     number: "",
     email: "",
     position: "",
     worktype: "",
     workLocation: "",
+    salary: "",
+    jobDescription: "",
   });
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log(LoginData);
-    // navigate('/Login');
+
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+      alert("Please log in to apply for jobs!");
+    }
     axios
       .post("http://localhost:8000/jobs", LoginData)
       .then((response) => {
+        console.log("ujwal");
         console.log(response.data);
+        console.log("ujwal");
       })
       .catch((error) => {
         console.error("Error job data:", error);
@@ -41,12 +51,11 @@ function EmployerLogin() {
   return (
     <div className="Employer-login">
       <div className="employeform">
-    
         <div className="emplyeimage-parents">
           <div className="employeeimage-child">
-            <img src={employepic } alt="Employee" />
+            <img src={employepic} alt="Employee" />
           </div>
-          <h1 style={{color:"green"}}>Post your Job Here </h1>
+          <h1 style={{ color: "green" }}>Post your Job Here </h1>
         </div>
 
         <form className="employeform" onSubmit={handleSubmit}>
@@ -76,7 +85,7 @@ function EmployerLogin() {
             onChange={handleChange}
           />
 
-          <label htmlFor="Password">Password:</label>
+          {/* <label htmlFor="Password">Password:</label>
           <input
             className="employeeinputs"
             type="password"
@@ -87,7 +96,7 @@ function EmployerLogin() {
             autoComplete="off"
             required
             onChange={handleChange}
-          />
+          /> */}
 
           <label htmlFor="Email">Email:</label>
           <input
@@ -126,7 +135,7 @@ function EmployerLogin() {
           >
             <option value="">Select Work Type</option>
             <option value="full-time"> Full-Time</option>
-            <option value="part-time">Part-time"</option>
+            <option value="part-time">Part-time</option>
             <option value="intership">Internship</option>
             <option value="contract">contract</option>
           </select>
@@ -142,16 +151,43 @@ function EmployerLogin() {
             autoComplete="off"
             onChange={handleChange}
           />
-            <div className="employbtn">
 
-          <button className="employerbtn" type="submit">
-            Submit
-          </button>
-            </div>
+          <label htmlFor="Slary">Salary:</label>
+          <input
+            className="employeeinputs"
+            type="text"
+            id="salary"
+            name="salary"
+            placeholder="Enter salary"
+            value={LoginData.salary}
+            autoComplete="off"
+            onChange={handleChange}
+          />
 
-          <ul className="employe" style={{color:"blue"}}>
-            <li >
-              Don't have an account? <Link to="/Login" className="employerLink">Login!</Link>
+          <label htmlFor="JobDescription">Job Description:</label>
+          <textarea
+            className="employeeinputs"
+            id="jobDescription"
+            name="jobDescription"
+            placeholder="Enter job description"
+            value={LoginData.jobDescription}
+            autoComplete="off"
+            required
+            onChange={handleChange}
+          />
+
+          <div className="employbtn">
+            <button className="employerbtn" type="submit">
+              Submit
+            </button>
+          </div>
+
+          <ul className="employe" style={{ color: "blue" }}>
+            <li>
+              Don't have an account?{" "}
+              <Link to="/Login" className="employerLink">
+                Login!
+              </Link>
             </li>
           </ul>
         </form>

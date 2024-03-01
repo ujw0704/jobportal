@@ -21,7 +21,7 @@ import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import SingleJobs from "./Components/SingleJobs";
 import ApplyJobs from "./Components/ApplyJobs";
 import Searchview from "./Components/Searchview";
-import NewsFeed from "./Components/NewsFeed";
+// import NewsFeed from "./Components/NewsFeed";
 
 
   export const context = createContext({})
@@ -58,7 +58,7 @@ function App() {
         <Route path="/ApplyJobs" element={<ApplyJobs/>}/>
           <Route path="/AdvanceSaerch" element={<AdvanceSearch/>}/>
           <Route path="/Searchview" element={<Searchview/>}/>
-          <Route path="/newsFeed" element={<NewsFeed/>}/>
+          {/* <Route path="/newsFeed" element={<NewsFeed/>}/> */}
           
         
         </Routes>

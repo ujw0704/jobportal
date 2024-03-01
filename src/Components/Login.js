@@ -57,7 +57,7 @@ function Login() {
    
 
     <div className='input-container'> 
-      <section className='section'>
+      <section className='sections'>
      
      
         </section>

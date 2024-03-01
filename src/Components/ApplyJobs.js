@@ -1,22 +1,20 @@
 
 import React, { useState } from 'react';
-import "./ApplyJobs.css"
+import "./ApplyJobs.css";
 import axios from "axios";
-import {  useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom';
 
 function ApplyJobs() {
   const [applyFormData, setApplyFormData] = useState({
     name: '',
     email: '',
     phoneNumber: '',
-    resume: null, 
+    resume: null,
     coverLetter: '',
-    experienceLevel: '', 
+    experienceLevel: '',
   });
 
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -24,7 +22,7 @@ function ApplyJobs() {
     if (type === 'file') {
       setApplyFormData({
         ...applyFormData,
-        [name]: files[0], 
+        [name]: files[0],
       });
     } else {
       setApplyFormData({
@@ -39,8 +37,9 @@ function ApplyJobs() {
     if (!localStorage.getItem("token")) {
       alert("Please log in to apply for jobs!");
       navigate("/login");
-    
+      return; 
     }
+
     const formData = new FormData();
     formData.append('name', applyFormData.name);
     formData.append('email', applyFormData.email);
@@ -57,96 +56,89 @@ function ApplyJobs() {
     .then(response => {
       console.log(response.data);
       console.log('Application Submitted:', applyFormData);
+      // Reset the form after successful submission
+      setApplyFormData({
+        name: '',
+        email: '',
+        phoneNumber: '',
+        resume: null,
+        coverLetter: '',
+        experienceLevel: '',
+      });
     })
     .catch(error => {
       console.error('Error job data:', error);
-    });
-
-    setApplyFormData({
-      name: '',
-      email: '',
-      phoneNumber: '',
-      resume: null,
-      coverLetter: '',
-      experienceLevel: '',
     });
   };
 
   return (
     <div className='applyJobsContainer'>
       <div className='applyjobs'>
-        <form  className ="applyFormData"Submit={handleSubmit}>
-          <h2 className='headerapply'>Job Application Form :</h2>
-           
-          <label>
-            Name:
-            </label>
-            <input className='applyinput'
-              type="text"
-              name="name"
-              value={applyFormData.name}
-              onChange={handleInputChange}
-              required
-            />
+        <form className="applyFormData" onSubmit={handleSubmit}>
+          <h2 className='headerapply'>Job Application Form:</h2>
 
-          <label>
-            Email:
-            </label>
-            <input className='applyinput'
-              type="email"
-              name="email"
-              value={applyFormData.email}
-              onChange={handleInputChange}
-              required
-            />
+          <label>Name:</label>
+          <input
+            className='applyinput'
+            type="text"
+            name="name"
+            value={applyFormData.name}
+            onChange={handleInputChange}
+            required
+          />
 
-          <label>
-            Phone Number:
-            </label >
-            <input className='applyinput'
-              type="tel"
-              name="phoneNumber"
-              value={applyFormData.phoneNumber}
-              onChange={handleInputChange}
-              required
-            />
+          <label>Email:</label>
+          <input
+            className='applyinput'
+            type="email"
+            name="email"
+            value={applyFormData.email}
+            onChange={handleInputChange}
+            required
+          />
 
-          <label>
-            Resume: (Attach your resume):
-            </label>
-            <input className='applyinput'
-              type="file"
-              name="resume"
-              accept=".pdf,.doc,.docx"
-              onChange={handleInputChange}
-              required
-            />
+          <label>Phone Number:</label>
+          <input
+            className='applyinput'
+            type="tel"
+            name="phoneNumber"
+            value={applyFormData.phoneNumber}
+            onChange={handleInputChange}
+            required
+          />
 
-          <label>
-            Cover Letter:
-            </label>
-            <textarea
-              name="coverLetter"
-              value={applyFormData.coverLetter}
-              onChange={handleInputChange}
-              required
-            />
+          <label>Resume: (Attach your resume)</label>
+          <input
+            className='applyinput'
+            type="file"
+            name="resume"
+            accept=".pdf,.doc,.docx"
+            onChange={handleInputChange}
+            required
+          />
 
-          <label>
-            Experience Level:
-            </label>
-            <select className='jobSelcet'
-              name="experienceLevel"
-              value={applyFormData.experienceLevel}
-              onChange={handleInputChange}
-              required
-            >
-              <option value="">Select</option>
-              <option value="fresher">Fresher</option>
-              <option value="experienced">Experienced</option>
-            </select>
+          <label>Cover Letter:</label>
+          <textarea
+            name="coverLetter"
+            value={applyFormData.coverLetter}
+            onChange={handleInputChange}
+            required
+          />
 
-          <button className ="SUBMIT" type="submit">Submit Application</button>
+          <label>Experience Level:</label>
+          <select
+            className='jobSelcet'
+            name="experienceLevel"
+            value={applyFormData.experienceLevel}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select</option>
+            <option value="fresher">Fresher</option>
+            <option value="experienced">Experienced</option>
+          </select>
+
+          <button className="SUBMIT" type="submit">Submit Application</button>
         </form>
       </div>
     </div>

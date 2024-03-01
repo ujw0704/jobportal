@@ -56,7 +56,7 @@
     /* border: 1px solid rgb(29, 193, 89); */
     /* font-weight: bold; */
     border-radius: 10px;
-    height: 350px;
+    height: 491px;
     width: 35%;
    
     margin: 20px;
@@ -97,7 +97,7 @@
   @media only screen and (max-width: 768px) {
     .jobCat {
       width: 110%;
-      height: 386px;
+      height: 456px;
 
     }
 

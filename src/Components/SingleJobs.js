@@ -11,6 +11,8 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import CreateIcon from "@mui/icons-material/Create";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
+import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
+import InfoIcon from '@mui/icons-material/Info';
 import "./Singlejobs.css";
 // import singlejob from "../Components/images/singlejob.png";
 import singlebg from "../Components/images/singlebg.jpg"
@@ -91,6 +93,8 @@ function SingleJobs() {
                 </span>
                 updateAt:{singleJobs.updatedAt}
               </p>
+              <p> <CurrencyYenIcon/>salary: {singleJobs.salary}</p>
+              <p> <InfoIcon/>jobDescription:{singleJobs.jobDescription}</p>
             </div>
           </div>
           <div className="singlebutton">

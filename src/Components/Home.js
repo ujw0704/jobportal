@@ -75,8 +75,11 @@ function Home() {
           <p className="mainline">
             {" "}
             Empowering Futures, One Opportunity at a Time Where Your Career
+           
             Journey Begins in Japan!
           </p>
+
+
           <hr />
           <div className="jobLink">
             <Link className="job-apply" to="/employers">
@@ -287,50 +290,7 @@ function Home() {
           </div>
         </section>
 
-        <section>
-          <div className="youthindia">
-
-            <div className="high-skill-cont">
-              <div className="straitline"></div>
-                 <span>WHAT IS HIGH-SKILL VISA?</span> 
-              <div className="straitline"></div>
-            </div>
-
-            <div className="youthparents"> 
-              <div  className="youthchild"> 
-                <p>  Foreign nationals who are certified as Highly-Skilled
-                  Professionals in Japan are granted significant advantages.
-                  Highly-Skilled Professional visa holders are always granted a
-                  five-year visa, the longest visa available & can apply for
-                  permanent residence after only one year of stay in Japan,
-                  while ordinary visa holders must have stayed in Japan for at
-                  least 10 years to apply for permanent residence. In the case
-                  of a general work visa, the requirements for a work visa must
-                  be met and changed if the spouse, such as a wife, works in
-                  Japan.  </p>
-
-                <div className="position-cnt-list"> 
-                    <h1>Positions Available</h1>
-                    <ul>
-                      <l1> IT Software Developer</l1>
-                      <l1>BLOCK CHAIN</l1>
-                      <l1>DATA SCIENTIST</l1>
-                      <l1> IoT</l1>
-                      <l1>Computer Vision</l1>
-                      <l1>UI/UX Designer</l1>
-                      <l1> Architecture</l1>
-                      <l1>Mechanical Engineer</l1>
-                    </ul>
-                </div> 
-                <p>  This residential visa is valid for 5 years, along with
-                  benefits like pension payment, paid leaves and many other such
-                  benefits. However taking a dependant under this visa is
-                  currently not allowed.
-                </p> 
-              </div>
-            </div>
-          </div>
-        </section>
+      
 
         <section>
           <div className="youthcontent">
@@ -386,6 +346,56 @@ function Home() {
             </div>
           </div>
         </section>
+        
+        <section>
+          <div className="youthindia">
+
+            <div className="high-skill-cont">
+              <div className="straitline"></div>
+                 <span>WHAT IS HIGH-SKILL VISA?</span> 
+              <div className="straitline"></div>
+            </div>
+
+            <div className="youthparents"> 
+              <div  className="youthchild"> 
+                <p>  Foreign nationals who are certified as Highly-Skilled
+                  Professionals in Japan are granted significant advantages.
+                  Highly-Skilled Professional visa holders are always granted a
+                  five-year visa, the longest visa available & can apply for
+                  permanent residence after only one year of stay in Japan,
+                  while ordinary visa holders must have stayed in Japan for at
+                  least 10 years to apply for permanent residence. In the case
+                  of a general work visa, the requirements for a work visa must
+                  be met and changed if the spouse, such as a wife, works in
+                  Japan.  </p>
+
+                <div className="position-cnt-list"> 
+                    <h1>Positions Available</h1>
+                    <ul>
+                      <l1> IT Software Developer</l1>
+                      <l1>BLOCK CHAIN</l1>
+                      <l1>DATA SCIENTIST</l1>
+                      <l1> IoT</l1>
+                      <l1>Computer Vision</l1>
+                      <l1>UI/UX Designer</l1>
+                      <l1> Architecture</l1>
+                      <l1>Mechanical Engineer</l1>
+                    </ul>
+                </div> 
+                <p>  This residential visa is valid for 5 years, along with
+                  benefits like pension payment, paid leaves and many other such
+                  benefits. However taking a dependant under this visa is
+                  currently not allowed.
+                </p> 
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+
+
         <section>
           <div class="custom-timeline-container">
             <h2>What is the Process for High Skill Visa (In Japan)</h2>
@@ -415,7 +425,7 @@ function Home() {
                 <div class="custom-timeline-content">
                   <h5>Job Placemanent</h5>
                   <p>
-                    Receive Assitance For Job Placement
+                    Receive Assitance For Job Placement by Recruitement Agency
                     <br />
                     Get Offer From Desired Company(for prelim Pass)
                   </p>
@@ -426,7 +436,10 @@ function Home() {
               <div class="custom-timeline-section">
                 <div class="custom-timeline-content">
                   <h5>Get Hired</h5>
-                  <p>Get Interview with your Hiring Company</p>
+                  <p>Get Interview with your Hiring Company
+                  <br/>
+                   Signing employment agrement & sending it to Japan
+                  </p>
                 </div>
                 <div class="custom-timeline-circle">4</div>
               </div>
@@ -445,8 +458,13 @@ function Home() {
               <div class="custom-timeline-path"></div>
               <div class="custom-timeline-section">
                 <div class="custom-timeline-content">
-                  <h5>Get in Touch With Japanse Ambassy </h5>
-                  <p>Issue of Coe By Japanse Ambassy</p>
+                  <h5>Get in Touch With Japanse Embassy </h5>
+                  <p>Issue of Coe By Japanse Embassy
+                  <br/>
+                  Visa Application In india for high Skill Visa Assitance
+
+                  </p>
+
                 </div>
                 <div class="custom-timeline-circle">6</div>
               </div>
@@ -456,7 +474,8 @@ function Home() {
                 <div class="custom-timeline-circle">7</div>
                 <div class="custom-timeline-content">
                   <h5>Issue Of Visa</h5>
-                  <p>Visa Issue Application In India</p>
+                  <p>Get Visa & enter in Japan</p>
+                  
                 </div>
               </div>
               <div class="custom-timeline-path"></div>

@@ -25,7 +25,7 @@ function Header() {
        
       axios.get(`http://localhost:8000/get-jobs`)
         .then((response) => {
-          console.log('Success!', response.data.data);
+          // console.log('Success!', response.data.data);
          
         })
         .catch((error) => {
@@ -72,9 +72,9 @@ function Header() {
               <Link to="/Employers">Employer</Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/newsFeed">newsFeed</Link>
-            </li>
+            </li> */}
 
           </ul>
         </div>

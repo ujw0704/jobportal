@@ -25,7 +25,7 @@ body {
 .home-container::after {
   content: "";
   position: absolute;
-  bottom: -758px;
+  bottom: -700px;
   right: 0px;
   left: 0;
   height: 75%;
@@ -701,7 +701,7 @@ h4 {
   margin: 50px 0;
 }
 .getstarted h1 {
-  margin-right: 138px;
+  /* margin-right: 138px; */
 }
 
 .getstarted .jobimages {
@@ -854,9 +854,9 @@ h4 {
   }
   .chart p {
     font-size: 12px;
-    padding-left: 1px;
-    width: 284px;
-    margin-right: 80;
+    width: 174px;
+    padding-right: 0px;
+ 
   }
   .chartchild {
     height: 321px;
@@ -869,8 +869,11 @@ h4 {
   }
   .content {
     min-height: 240px;
-    padding-left: 8px;
+   
     padding-right: 0px;
+    padding-left: 0px;
+    border-right-width: 20px;
+    width: 82px;
   }
   .youthcontent h1 {
     width: 350px;
@@ -897,7 +900,7 @@ h4 {
     margin-left: 0px;
   }
   .getstarted { 
-    width: 457px; 
+    width: 333px; 
     height: 111px;
   
   }
@@ -911,21 +914,22 @@ h4 {
   }
 
   .jobimages img {
-    width: 109%;
+    width: 91px;
     height: 238px;
     object-fit: cover;
-    margin-top: 152px;
+    margin-left: 95px;
+    margin-top: 35px;
   }
   .share-button {
     width: 221px;
     height: 60px;
-    margin-left: 176px;
+    /* margin-left: 176px; */
     padding-bottom: 0px;
   }
   .share-button span {
     padding-top: 0px;
   }
   .getstarted h1 {
-    margin-right: 55px;
+    width: 52px;
   }
 }

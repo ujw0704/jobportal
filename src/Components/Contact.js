@@ -24,6 +24,7 @@ return(
             <div className="conatcimageschild">
                   <img src ={contact} alt="contact"/>
             </div>
+            
         </div>
     <form className="formContact" onSubmit ={handleSubmit}>
                <h1>Contact</h1>
