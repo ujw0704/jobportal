@@ -23,8 +23,10 @@ function EmployerLogin() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(LoginData);
+    if(LoginData.company === "") {
+      LoginData.company = "unknown comapny"
 
+    }
     if (!localStorage.getItem("token")) {
       navigate("/login");
       alert("Please log in to apply for jobs!");
@@ -32,9 +34,9 @@ function EmployerLogin() {
     axios
       .post("http://localhost:8000/jobs", LoginData)
       .then((response) => {
-        console.log("ujwal");
+        
         console.log(response.data);
-        console.log("ujwal");
+       
       })
       .catch((error) => {
         console.error("Error job data:", error);
@@ -42,6 +44,7 @@ function EmployerLogin() {
   }
 
   function handleChange(event) {
+    
     setLoginData({
       ...LoginData,
       [event.target.name]: event.target.value,
@@ -50,15 +53,15 @@ function EmployerLogin() {
 
   return (
     <div className="Employer-login">
-      <div className="employeform">
+      <div className="employeform1">
         <div className="emplyeimage-parents">
           <div className="employeeimage-child">
             <img src={employepic} alt="Employee" />
           </div>
-          <h1 style={{ color: "green" }}>Post your Job Here </h1>
         </div>
-
+         
         <form className="employeform" onSubmit={handleSubmit}>
+          <h1 style={{ color: "green" }}>Post your Job Here </h1>
           <label htmlFor="Company">Company Name:</label>
           <input
             className="employeeinputs"
@@ -68,7 +71,7 @@ function EmployerLogin() {
             id="company"
             name="company"
             autoComplete="off"
-            required
+            // required
             onChange={handleChange}
           />
 

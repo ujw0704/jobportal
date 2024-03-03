@@ -8,7 +8,6 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    /* background-color: #f4f4f4; */
   }
   
   .seachbar {
@@ -53,15 +52,14 @@
   
   .jobCat {
     position: relative;
-    /* border: 1px solid rgb(29, 193, 89); */
-    /* font-weight: bold; */
+   
     border-radius: 10px;
     height: 491px;
     width: 35%;
    
     margin: 20px;
     box-shadow: 5px 2px 5px;
-    /* color: rgb(19, 165, 75); */
+   
   }
   
   .jobCat h2,
@@ -90,6 +88,7 @@
   .Applybutton {
     left: 50%;
     color: white;
+    background: rgb(10, 17, 150);
   }
   
   /* Media Queries */
@@ -138,9 +137,7 @@
       width: 80px!important;
       margin: 10px;
       margin-top: 25px;
-      /* width: 50px; */
-      /* height: 30px; */
-      /* margin-bottom: 20px; */
+    
     
     }
   }.jobCat p{

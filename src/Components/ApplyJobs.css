@@ -7,8 +7,7 @@
 .applyJobsContainer {
     
     width: 100%;
-    /* margin-top: 96px;
-    margin-bottom: 60px; */
+  
     background-image: url('./images/singleback.jpg'); 
     
     background-size: cover;
@@ -84,7 +83,7 @@
     padding: 10px;
 }
 
-textarea {
+.applyFormData>textarea {
     border-radius: 5px;
     min-width:  60%;
     max-width: 60%;
@@ -92,13 +91,13 @@ textarea {
     font-size: 18px; 
 }
 
-.SUBMIT {
+.applyFormData>.SUBMIT {
     width: 150px; 
   
     padding: 10px; 
     border-radius: 30px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff!important;
+    color:white;
     border: none;
     cursor: pointer;
     margin-bottom: 70px;

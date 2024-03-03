@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 .registerdata{
-    min-height: 75vh;
+  
 }
 
+.register.container1{
+ 
+  padding-top:40px ;
+
+}
 .register {
     
   top: 20px;
@@ -19,12 +24,24 @@
 }
 .register {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-bottom: 25px;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* position: relative; */
+  margin-bottom:  25px ;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  
  
+}
+
+.register>label{
+  float: left;
+  padding: 0 0 0.5rem 0.7rem;
+
+}
+.register h2{
+  font-size:3rem ;
+
 }
 .register input {
   color: #2e2929;
@@ -34,24 +51,10 @@
   transition: border-color 0.3s, color 0.3s;
   border-radius: 5px;
   width: 500px;
-  height: 30px;
+  font-size: 20px;
+  
 }
 
-.register label {
-  position: absolute;
-  bottom: 95%;
-  left: 0;
-  transform: translateY(-50%) translateX(0.625rem);
-  color: #efefef;
-  padding-inline: 0.25rem;
-  font-size: 0.875rem;
-  pointer-events: none;
-  z-index: 999;
-  border-radius: 3px;
-  /* padding: 3px; */
-
-  transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
-}
 
 .register:hover input {
   border-color: #216fa4;
@@ -74,14 +77,11 @@
   cursor: alias;
 }
 
-.register:hover label {
-  /* color: rgb(205, 224, 218);  */
-  background-color: #1e1f1f;
-}
-form {
-  width: 320px;
 
-  text-align: center;
+.register>form {
+  /* width: 320px; */
+
+  /* text-align: center; */
 
   display: flex;
   justify-content: space-around;
@@ -93,7 +93,7 @@ form {
   backdrop-filter: blur(30px) saturate(50%);
   border-radius: 30px;
   z-index: 998;
-  height: 550px;
+  /* height: 550px; */
 }
 .registerbutton {
   padding: 0.625rem 1rem;
@@ -113,33 +113,30 @@ form {
 @media screen and (max-width: 767px) {
   .registerbutton {
     width: 250px;
-    /* border-radius: 15px;  */
-    margin-left: 121px !important;
+    
   }
   .register {
     padding-left: 0px;
     padding-right: 0px;
-    width: 250px;
-    /* margin-bottom: 30px;
-            margin-left: 7px; */
-    /* left: 6px; */
+  
     top: 20px;
+  }
+  .register input{
+    width:300px ;
   }
 }
 
-.labelregister {
-  margin-right: 150px;
-}
+
 
 .heder-register {
   display: flex;
   justify-content: center;
   margin-bottom: 27px;
-  /* margin-right: 49px; */
+ 
 }
 .register input {
-  margin-left: 13px;
-  font-size: 14px;
+
+  font-size: 20px;
 }
 .registerbutton {
   margin-right: 2px;

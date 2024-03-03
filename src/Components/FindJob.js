@@ -11,17 +11,16 @@ import PostAddIcon from "@mui/icons-material/PostAdd";
 import UpdateIcon from "@mui/icons-material/Update";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
-import CreateIcon from '@mui/icons-material/Create';
-import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
-import InfoIcon from '@mui/icons-material/Info';
-
-
+import CreateIcon from "@mui/icons-material/Create";
+import CurrencyYenIcon from "@mui/icons-material/CurrencyYen";
+import InfoIcon from "@mui/icons-material/Info";
 
 function FindJob() {
   const { id, setId, findJob, setFindJob, search, setSearch } =
     useContext(context);
 
   const [searchFilter, setFilter] = useState([]);
+  // const [updatesalary, setSalary]= useState([])
 
   const navigate = useNavigate();
 
@@ -29,14 +28,20 @@ function FindJob() {
     axios
       .get(`http://localhost:8000/get-jobs`)
       .then((response) => {
+        // console.log(typeof response.data.data[0].salary)
         console.log("Success!", response.data.data);
         setFindJob(response.data.data);
         setFilter(response.data.data);
+        // setSalary(response.data.data)
+        
       })
       .catch((error) => {
         console.error("Error fetching job data:", error);
       });
   }, []);
+
+  // console.log(updatesalary)
+
   function handleClick(e, jobid) {
     e.preventDefault();
     // console.log(id)
@@ -71,6 +76,9 @@ function FindJob() {
     setFindJob(result);
   }, [search]);
 
+
+
+
   return (
     <>
       <div className="seachbar">
@@ -93,35 +101,39 @@ function FindJob() {
                 Company:{job.company}
               </h2>
               <p>
-                
-              <CreateIcon/>
+                <CreateIcon />
                 CreatedAt: {job.createdAt}
               </p>
               <p>
-                
                 <PhoneIcon /> Number: {job.number}
               </p>
               {/* <p>Password: {job.password}</p> */}
               <p>
-                
                 <PostAddIcon />
                 Position: {job.position}
               </p>
               <p>
-                
                 <UpdateIcon />
                 UpdatedAt: {job.updatedAt}
               </p>
               <p>
-                
                 <EditLocationIcon /> WorkLocation: {job.workLocation}
               </p>
               <p>
-                
                 <Diversity3Icon /> WorkType: {job.worktype}
               </p>
-              <p> <CurrencyYenIcon/>salary: {job.salary}</p>
-              <p> <InfoIcon/>jobDescription:{job.jobDescription}</p>
+              
+                <p>
+                  {" "}
+                  <CurrencyYenIcon />
+                  Salary: {Number(job.salary).toLocaleString("en-IN")}
+                </p>
+            
+              <p>
+                {" "}
+                <InfoIcon />
+                jobDescription:{job.jobDescription}
+              </p>
               <button
                 className="veiwButton"
                 onClick={(e) => handleClick(e, job._id)}
