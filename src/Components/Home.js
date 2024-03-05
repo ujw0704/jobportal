@@ -4,16 +4,17 @@ import { Link } from "react-router-dom";
 import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import PlaceIcon from "@mui/icons-material/Place";
 import EngineeringIcon from "@mui/icons-material/Engineering";
-import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
+
 import SearchIcon from "@mui/icons-material/Search";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
-import MedicationLiquidIcon from "@mui/icons-material/MedicationLiquid";
-import HotelIcon from "@mui/icons-material/Hotel";
+import CarRepairIcon from '@mui/icons-material/CarRepair';
 import back from "../Components/images/background-images.png";
 import search from "../Components/images/search.png";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import chart from "../Components/images/piechart for visa.jpg";
+import Diversity2Icon from '@mui/icons-material/Diversity2'
+import LaptopMacIcon from '@mui/icons-material/LaptopMac'
 // import benfit from "../Components/images/befint.png"
 import { FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -189,36 +190,36 @@ function Home() {
             </div>
             <div className="category-description">
               <p>Architecture</p>
-              <p>0 Open Positions</p>
+              
             </div>
           </div>
 
           <div className="category-item">
             <div>
               <div className="icon">
-                <MedicationLiquidIcon sx={{ fontSize: 90 }} />
+                <LaptopMacIcon sx={{ fontSize: 90 }} />
               </div>
             </div>
             <div className="category-description">
-              <p>Health</p>
+              <p>Information technology</p>
             </div>
           </div>
 
           <div className="category-item">
             <div className="icon">
-              <CleaningServicesIcon sx={{ fontSize: 90 }} />
+              <CarRepairIcon sx={{ fontSize: 90 }} />
             </div>
             <div className="category-description">
-              <p>Cleaning Services</p>
+              <p>Automobile Engineering</p>
             </div>
           </div>
 
           <div className="category-item">
             <div className="icon">
-              <HotelIcon sx={{ fontSize: 90 }} />
+              <Diversity2Icon sx={{ fontSize: 90 }} />
             </div>
             <div className="category-description">
-              <p>Restaurant</p>
+              <p>Specified Skilled Worker</p>
             </div>
           </div>
         </div>
@@ -316,33 +317,53 @@ function Home() {
               <div class="container left">
                 <div class="content">
                   <h2>Step 3</h2>
-                  <p>Receive Assitance for Job Placement</p>
+                  <p> Get verified by Recruitment Agency (Pre Interview)</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
                   <h2>Step 4</h2>
-                  <p>Get employer by accepting company</p>
+                  <p>Receive Assistance for Job Matching by Recruitment Agency</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
                   <h2>Step 5</h2>
-                  <p>Application for Coe (will be assitanced)</p>
+                  <p>Interview by accepting company</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
-                  <h2>Step 5</h2>
-                  <p>Issue of Coe by Japan embassy</p>
+                  <h2>Step 6</h2>
+                  <p>Signing employment agreement & sending it to Japan</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
-                  <h2>Step 6</h2>
-                  <p>Enter Japan</p>
+                  <h2>Step 7</h2>
+                  <p>Application for COE by company (will be assisted)</p>
                 </div>
               </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>Step 8</h2>
+                  <p> Issue of COE by Japan Embassy</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <h2>Step 9</h2>
+                  <p>Visa Application In India (assisted)</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>Step 10</h2>
+                  <p>Get Visa & Enter Japan</p>
+                </div>
+              </div>
+             
+             
             </div>
           </div>
         </section>
@@ -412,8 +433,8 @@ function Home() {
 
               <div class="custom-timeline-section">
                 <div class="custom-timeline-content">
-                  <h5>Interview</h5>
-                  <p>Connect with Us For Preliminary interview</p>
+                  <h5>Pre Interview</h5>
+                  <p>Preliminary Interview by Recruitment Agency</p>
                 </div>
                 <div class="custom-timeline-circle">2</div>
               </div>
@@ -426,7 +447,7 @@ function Home() {
                   <h5>Job Placemanent</h5>
                   <p>
                     Receive Assitance For Job Placement by Recruitement Agency
-                    <br />
+                    
                     Get Offer From Desired Company(for prelim Pass)
                   </p>
                 </div>
@@ -436,9 +457,9 @@ function Home() {
               <div class="custom-timeline-section">
                 <div class="custom-timeline-content">
                   <h5>Get Hired</h5>
-                  <p>Get Interview with your Hiring Company
-                  <br/>
-                   Signing employment agrement & sending it to Japan
+                  <p>
+                 
+                  Signing employment agreement & sending it to Japan
                   </p>
                 </div>
                 <div class="custom-timeline-circle">4</div>
@@ -458,11 +479,9 @@ function Home() {
               <div class="custom-timeline-path"></div>
               <div class="custom-timeline-section">
                 <div class="custom-timeline-content">
-                  <h5>Get in Touch With Japanse Embassy </h5>
+                  <h5>Issue visa </h5>
                   <p>Issue of Coe By Japanse Embassy
-                  <br/>
-                  Visa Application In india for high Skill Visa Assitance
-
+                  
                   </p>
 
                 </div>
@@ -473,12 +492,34 @@ function Home() {
               <div class="custom-timeline-section">
                 <div class="custom-timeline-circle">7</div>
                 <div class="custom-timeline-content">
-                  <h5>Issue Of Visa</h5>
-                  <p>Get Visa & enter in Japan</p>
+              <h5>Get Assistance</h5>
+                  <p>Visa Application In India for High Skill Visa (assisted)</p>
                   
                 </div>
               </div>
               <div class="custom-timeline-path"></div>
+
+              <div class="custom-timeline-section">
+                <div class="custom-timeline-content">
+                  <h5>Get in Touch With Japanse Embassy </h5>
+                  <p>
+                  Get Visa & Enter Japan
+
+                  </p>
+
+                </div>
+                <div class="custom-timeline-circle">8</div>
+              </div>
+              <div class="custom-timeline-path"></div>
+
+<div class="custom-timeline-section">
+  <div class="custom-timeline-circle">9</div>
+  <div class="custom-timeline-content">
+    <h5>Issue Of Visa</h5>
+    <p>Get Visa & enter in Japan</p>
+    
+  </div>
+</div>
             </div>
           </div>
         </section>

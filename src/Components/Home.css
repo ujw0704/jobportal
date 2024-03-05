@@ -336,7 +336,7 @@ h4 {
   font-size: 24px;
 }
 .category-item {
-  width: 15%;
+  width: 18%;
 
   display: flex;
   justify-content: center;
@@ -932,4 +932,7 @@ h4 {
   .getstarted h1 {
     width: 52px;
   }
+  .chart>h2 {
+    margin-bottom: -5px
+}
 }
